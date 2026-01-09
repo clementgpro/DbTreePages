@@ -28,9 +28,6 @@ const Navbar = () => {
 
         {/* CTA */}
         <div className="flex items-center gap-3">
-          <Button variant="ghost" size="sm" className="hidden sm:inline-flex">
-            Se connecter
-          </Button>
           <Button size="sm">
             Essayer gratuitement
           </Button>
