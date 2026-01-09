@@ -1,30 +1,56 @@
-import ScreenshotPlaceholder from "@/components/ScreenshotPlaceholder";
-import { GitBranch, Zap, Eye, Layers } from "lucide-react";
+import { GitBranch, Zap, Eye, Layers, MousePointerClick, Copy, Shield, Gauge } from "lucide-react";
 
-const features = [
+const mainFeatures = [
   {
     icon: GitBranch,
-    title: "Navigation hiérarchique",
-    description: "Explorez vos tables comme un arbre. Cliquez sur une ligne pour voir instantanément toutes ses relations enfants.",
-    screenshot: "Capture - Navigation arborescente"
+    title: "Navigation Intelligente",
+    description: "Explorez vos données en suivant naturellement les relations entre tables. Cliquez pour déplier, naviguez d'un enregistrement à l'autre en visualisant instantanément les liens parent-enfant.",
+    gradient: "from-emerald-500/20 to-teal-500/20",
+    iconColor: "text-emerald-500"
   },
   {
     icon: Eye,
-    title: "Jointures visuelles",
-    description: "Plus besoin d'écrire des JOIN complexes. Voyez vos relations de données en un coup d'œil.",
-    screenshot: "Capture - Visualisation des jointures"
+    title: "Visualisation en Arborescence",
+    description: "Transformez vos clés étrangères en une structure visuelle claire. Comprenez en un coup d'œil comment vos tables sont interconnectées et découvrez les dépendances cachées.",
+    gradient: "from-blue-500/20 to-indigo-500/20",
+    iconColor: "text-blue-500"
   },
   {
     icon: Zap,
-    title: "Performance optimisée",
-    description: "Requêtes intelligentes en arrière-plan. Ne chargez que les données dont vous avez besoin.",
-    screenshot: "Capture - Performance et chargement"
+    title: "Chargement Intelligent",
+    description: "Grâce au lazy loading, explorez des millions d'enregistrements sans ralentissement. Seules les données dont vous avez besoin sont chargées au moment opportun.",
+    gradient: "from-amber-500/20 to-orange-500/20",
+    iconColor: "text-amber-500"
   },
   {
     icon: Layers,
-    title: "Multi-niveaux",
-    description: "Descendez dans vos données autant que nécessaire. Clients → Commandes → Produits → Fournisseurs...",
-    screenshot: "Capture - Exploration multi-niveaux"
+    title: "Pagination Fluide",
+    description: "Parcourez facilement de grandes tables avec une pagination intuitive. Filtrez par ID spécifique ou naviguez page par page à travers vos enregistrements.",
+    gradient: "from-purple-500/20 to-pink-500/20",
+    iconColor: "text-purple-500"
+  }
+];
+
+const secondaryFeatures = [
+  {
+    icon: MousePointerClick,
+    title: "Détails en Un Clic",
+    description: "Affichez tous les champs d'un enregistrement dans un panneau dédié."
+  },
+  {
+    icon: Copy,
+    title: "Export Facile",
+    description: "Copiez une valeur, un champ ou une ligne complète instantanément."
+  },
+  {
+    icon: Shield,
+    title: "Lecture Seule",
+    description: "Explorez en toute confiance, DbTree ne modifie jamais vos données."
+  },
+  {
+    icon: Gauge,
+    title: "Performance Maximale",
+    description: "Pool de connexions optimisé pour une exploration fluide."
   }
 ];
 
@@ -35,33 +61,49 @@ const FeaturesSection = () => {
         {/* Section header */}
         <div className="mx-auto mb-16 max-w-2xl text-center">
           <h2 className="mb-4 text-3xl font-bold sm:text-4xl">
-            Tout ce dont vous avez besoin
+            Une nouvelle façon d'<span className="gradient-text">explorer vos données</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            DbTree repense la façon dont vous interagissez avec vos bases de données.
+            Fini les requêtes SQL compliquées ! Découvrez instantanément comment vos données sont connectées avec une interface moderne et puissante.
           </p>
         </div>
 
-        {/* Features grid */}
-        <div className="grid gap-8 md:grid-cols-2">
-          {features.map((feature, index) => (
+        {/* Main features grid */}
+        <div className="grid gap-6 md:grid-cols-2">
+          {mainFeatures.map((feature, index) => (
             <div 
               key={index}
-              className="group rounded-2xl border border-border/50 bg-card p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"
+              className="group relative overflow-hidden rounded-2xl border border-border/50 bg-card p-8 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"
             >
-              {/* Icon and title */}
-              <div className="mb-4 flex items-center gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                  <feature.icon className="h-6 w-6" />
+              {/* Background gradient */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 transition-opacity duration-300 group-hover:opacity-100`} />
+              
+              <div className="relative">
+                {/* Icon */}
+                <div className={`mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-background/80 ${feature.iconColor} shadow-lg transition-transform duration-300 group-hover:scale-110`}>
+                  <feature.icon className="h-7 w-7" />
                 </div>
-                <h3 className="text-xl font-semibold">{feature.title}</h3>
+
+                {/* Content */}
+                <h3 className="mb-3 text-xl font-semibold">{feature.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
               </div>
+            </div>
+          ))}
+        </div>
 
-              {/* Description */}
-              <p className="mb-6 text-muted-foreground">{feature.description}</p>
-
-              {/* Screenshot */}
-              <ScreenshotPlaceholder label={feature.screenshot} aspectRatio="video" />
+        {/* Secondary features */}
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {secondaryFeatures.map((feature, index) => (
+            <div 
+              key={index}
+              className="group rounded-xl border border-border/50 bg-card/50 p-5 transition-all duration-300 hover:bg-card hover:border-primary/20"
+            >
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                <feature.icon className="h-5 w-5" />
+              </div>
+              <h4 className="mb-1 font-semibold">{feature.title}</h4>
+              <p className="text-sm text-muted-foreground">{feature.description}</p>
             </div>
           ))}
         </div>
