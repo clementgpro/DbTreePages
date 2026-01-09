@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
-import heroScreenshot from "@/assets/hero-screenshot.jpg";
+import heroDemo from "@/assets/hero-demo.gif";
 
 const HeroSection = () => {
   return (
@@ -46,7 +46,7 @@ const HeroSection = () => {
             {/* Screenshot container */}
             <div className="relative rounded-2xl border border-border/50 bg-card p-2 shadow-2xl">
               <img 
-                src={heroScreenshot} 
+                src={heroDemo} 
                 alt="Interface DbTree - Visualisation hiérarchique des données" 
                 className="w-full rounded-xl"
               />
