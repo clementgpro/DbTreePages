@@ -1,5 +1,6 @@
 import ScreenshotPlaceholder from "@/components/ScreenshotPlaceholder";
 import { X, Check } from "lucide-react";
+import avantSql from "@/assets/avant-sql.png";
 
 const ComparisonSection = () => {
   return (
@@ -26,10 +27,13 @@ const ComparisonSection = () => {
               <h3 className="text-xl font-semibold">Client SQL classique</h3>
             </div>
 
-            <ScreenshotPlaceholder 
-              label="Capture - Vue tabulaire classique" 
-              aspectRatio="video" 
-            />
+            <div className="overflow-hidden rounded-xl border border-border/50">
+              <img 
+                src={avantSql} 
+                alt="Vue tabulaire classique d'un client SQL" 
+                className="w-full"
+              />
+            </div>
 
             <ul className="mt-6 space-y-3">
               {[
