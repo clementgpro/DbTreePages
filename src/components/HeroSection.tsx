@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import ScreenshotPlaceholder from "@/components/ScreenshotPlaceholder";
 import { ArrowRight, Sparkles } from "lucide-react";
+import heroScreenshot from "@/assets/hero-screenshot.jpg";
 
 const HeroSection = () => {
   return (
@@ -45,9 +45,10 @@ const HeroSection = () => {
             
             {/* Screenshot container */}
             <div className="relative rounded-2xl border border-border/50 bg-card p-2 shadow-2xl">
-              <ScreenshotPlaceholder 
-                label="Capture d'écran principale - Interface DbTree" 
-                aspectRatio="video"
+              <img 
+                src={heroScreenshot} 
+                alt="Interface DbTree - Visualisation hiérarchique des données" 
+                className="w-full rounded-xl"
               />
             </div>
           </div>
