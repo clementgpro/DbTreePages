@@ -1,6 +1,6 @@
-import ScreenshotPlaceholder from "@/components/ScreenshotPlaceholder";
 import { X, Check } from "lucide-react";
 import avantSql from "@/assets/avant-sql.png";
+import apresDbtree from "@/assets/apres-dbtree.jpg";
 
 const ComparisonSection = () => {
   return (
@@ -59,10 +59,13 @@ const ComparisonSection = () => {
               <h3 className="text-xl font-semibold">Avec DbTree</h3>
             </div>
 
-            <ScreenshotPlaceholder 
-              label="Capture - Vue arborescente DbTree" 
-              aspectRatio="video" 
-            />
+            <div className="overflow-hidden rounded-xl border border-border/50">
+              <img 
+                src={apresDbtree} 
+                alt="Vue arborescente DbTree" 
+                className="w-full"
+              />
+            </div>
 
             <ul className="mt-6 space-y-3">
               {[
