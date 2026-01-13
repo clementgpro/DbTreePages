@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroDemo from "@/assets/hero-demo.gif";
+import demoVideo from "@/assets/demo-video.mp4";
 
 const HeroSection = () => {
   return (
@@ -42,17 +42,20 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Hero Screenshot */}
+        {/* Hero Video */}
         <div className="mx-auto mt-16 max-w-5xl animate-slide-up delay-400">
           <div className="relative">
             {/* Glow behind */}
             <div className="absolute -inset-4 rounded-2xl bg-primary/20 blur-3xl animate-pulse-glow" />
             
-            {/* Screenshot container */}
+            {/* Video container */}
             <div className="relative rounded-2xl border border-border/50 bg-card p-2 shadow-2xl">
-              <img 
-                src={heroDemo} 
-                alt="Interface DbTree - Visualisation hiérarchique des données" 
+              <video 
+                src={demoVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
                 className="w-full rounded-xl"
               />
             </div>
