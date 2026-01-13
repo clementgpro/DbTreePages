@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check, Lock } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const PricingSection = () => {
   return (
@@ -50,8 +51,8 @@ const PricingSection = () => {
               </li>
             </ul>
 
-            <Button variant="outline" className="w-full">
-              Commencer gratuitement
+            <Button variant="outline" className="w-full" asChild>
+              <Link to="/download">Commencer gratuitement</Link>
             </Button>
           </div>
 
@@ -92,8 +93,8 @@ const PricingSection = () => {
               </li>
             </ul>
 
-            <Button className="w-full">
-              Passer à Pro
+            <Button className="w-full" asChild>
+              <Link to="/download">Passer à Pro</Link>
             </Button>
           </div>
         </div>

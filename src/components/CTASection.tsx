@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TreePine } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CTASection = () => {
   return (
@@ -27,9 +28,11 @@ const CTASection = () => {
 
             {/* CTAs */}
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button variant="hero" size="xl">
-                Démarrer maintenant
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Button variant="hero" size="xl" asChild>
+                <Link to="/download">
+                  Télécharger maintenant
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
               <Button variant="outline" size="xl">
                 Contacter l'équipe
