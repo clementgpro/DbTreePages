@@ -1,0 +1,8 @@
+# Ignore les fichiers et dossiers de configuration JetBrains
+.idea/
+# Autres fichiers/dossiers courants à ignorer
+*.log
+node_modules/
+dist/
+.env
+
