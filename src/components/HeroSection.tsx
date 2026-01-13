@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroDemo from "@/assets/hero-demo.gif";
 
 const HeroSection = () => {
@@ -27,12 +28,16 @@ const HeroSection = () => {
 
           {/* CTAs */}
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row animate-slide-up delay-300">
-            <Button variant="hero" size="xl">
-              Commencer gratuitement
-              <ArrowRight className="ml-2 h-5 w-5" />
+            <Button variant="hero" size="xl" asChild>
+              <Link to="/download">
+                Commencer gratuitement
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
-            <Button variant="heroOutline" size="xl">
-              Voir la démo
+            <Button variant="heroOutline" size="xl" asChild>
+              <a href="#features">
+                Voir les fonctionnalités
+              </a>
             </Button>
           </div>
         </div>
