@@ -46,19 +46,17 @@ const HeroSection = () => {
         <div className="mx-auto mt-16 max-w-5xl animate-slide-up delay-400">
           <div className="relative">
             {/* Glow behind */}
-            <div className="absolute -inset-4 rounded-2xl bg-primary/20 blur-3xl animate-pulse-glow" />
+            <div className="absolute -inset-8 rounded-2xl bg-primary/40 blur-3xl animate-pulse-glow" />
             
-            {/* Video container */}
-            <div className="relative rounded-2xl border border-border/50 bg-card p-2 shadow-2xl overflow-hidden">
-              <video 
-                src={demoVideo}
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full"
-              />
-            </div>
+            {/* Video */}
+            <video 
+              src={demoVideo}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="relative w-full rounded-lg border border-border/50 shadow-2xl"
+            />
           </div>
         </div>
 
