@@ -1,4 +1,5 @@
-import { TreePine, Github, Twitter } from "lucide-react";
+import { Github, Twitter } from "lucide-react";
+import appIcon from "@/assets/app-icon.png";
 
 const Footer = () => {
   return (
@@ -7,9 +8,7 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-between gap-8 sm:flex-row">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-              <TreePine className="h-5 w-5 text-primary-foreground" />
-            </div>
+            <img src={appIcon} alt="DbTree" className="h-9 w-9 rounded-lg" />
             <span className="text-xl font-bold">DbTree</span>
           </div>
 
