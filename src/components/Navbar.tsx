@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { TreePine } from "lucide-react";
 import { Link } from "react-router-dom";
+import appIcon from "@/assets/app-icon.png";
 
 const Navbar = () => {
   return (
@@ -8,9 +8,7 @@ const Navbar = () => {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 transition-opacity hover:opacity-80">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-            <TreePine className="h-5 w-5 text-primary-foreground" />
-          </div>
+          <img src={appIcon} alt="DbTree" className="h-9 w-9 rounded-lg" />
           <span className="text-xl font-bold">DbTree</span>
         </Link>
 
