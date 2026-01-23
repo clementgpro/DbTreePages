@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Rocket } from "lucide-react";
 import { Link } from "react-router-dom";
 import demoVideo from "@/assets/demo-video.mp4";
 
@@ -17,24 +17,27 @@ const HeroSection = () => {
 
         {/* Heading */}
         <div className="mx-auto max-w-4xl text-center">
-          <h1 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl animate-slide-up delay-100">
-            Visualisez vos données{" "}
-            <span className="gradient-text">hiérarchiquement</span>
+          <h1 className="mb-2 text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl animate-slide-up delay-100">
+            Visualisez vos données
           </h1>
-          <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground sm:text-xl animate-slide-up delay-200">
-            Fini les requêtes SQL pour voir vos jointures. DbTree vous permet de naviguer 
-            dans vos relations de données en un coup d'œil, comme jamais auparavant.
+          <h2 className="mb-6 text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl animate-slide-up delay-100">
+            <span className="gradient-text">10x plus vite</span>
+          </h2>
+          <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground animate-slide-up delay-200">
+            <span className="font-semibold text-foreground">Fini les requêtes SQL pour voir vos jointures.</span>
+            <br />
+            Avec DbTree, naviguez dans vos relations de données en un coup d'œil.
           </p>
 
           {/* CTAs */}
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row animate-slide-up delay-300">
-            <Button variant="hero" size="xl" asChild>
+            <Button variant="hero" size="xl" className="rounded-full" asChild>
               <Link to="/download">
-                Commencer gratuitement
-                <ArrowRight className="ml-2 h-5 w-5" />
+                Tester gratuitement
+                <Rocket className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button variant="heroOutline" size="xl" asChild>
+            <Button variant="heroOutline" size="xl" className="rounded-full" asChild>
               <a href="#features">
                 Voir les fonctionnalités
               </a>
@@ -42,14 +45,27 @@ const HeroSection = () => {
           </div>
         </div>
 
+        {/* Stats */}
+        <div className="mx-auto mt-16 grid max-w-3xl grid-cols-1 gap-8 sm:grid-cols-3 animate-slide-up delay-300">
+          {[
+            { value: "10x", label: "Plus rapide que SQL" },
+            { value: "0", label: "Requête à écrire" },
+            { value: "∞", label: "Relations visibles" },
+          ].map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="mb-2 text-4xl font-bold gradient-text sm:text-5xl">
+                {stat.value}
+              </div>
+              <div className="text-sm text-muted-foreground">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+
         {/* Hero Video */}
         <div className="mx-auto mt-16 max-w-5xl animate-slide-up delay-400">
           <div className="relative">
-            {/* Grid pattern behind */}
-            <div className="absolute -inset-12 rounded-3xl grid-pattern-intense opacity-60" />
-            
             {/* Glow behind */}
-            <div className="absolute -inset-8 rounded-2xl bg-primary/50 blur-3xl animate-pulse-glow" />
+            <div className="absolute -inset-8 rounded-2xl bg-primary/30 blur-3xl animate-pulse-glow" />
             
             {/* Video */}
             <video 
@@ -61,22 +77,6 @@ const HeroSection = () => {
               className="relative w-full rounded-xl border border-primary/20 shadow-2xl"
             />
           </div>
-        </div>
-
-        {/* Stats */}
-        <div className="mx-auto mt-20 grid max-w-3xl grid-cols-1 gap-8 sm:grid-cols-3">
-          {[
-            { value: "10x", label: "Plus rapide que SQL" },
-            { value: "0", label: "Requête à écrire" },
-            { value: "∞", label: "Relations visibles" },
-          ].map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="mb-2 text-3xl font-bold gradient-text sm:text-4xl">
-                {stat.value}
-              </div>
-              <div className="text-sm text-muted-foreground">{stat.label}</div>
-            </div>
-          ))}
         </div>
       </div>
     </section>
