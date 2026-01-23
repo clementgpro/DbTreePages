@@ -45,8 +45,11 @@ const HeroSection = () => {
         {/* Hero Video */}
         <div className="mx-auto mt-16 max-w-5xl animate-slide-up delay-400">
           <div className="relative">
+            {/* Grid pattern behind */}
+            <div className="absolute -inset-12 rounded-3xl grid-pattern-intense opacity-60" />
+            
             {/* Glow behind */}
-            <div className="absolute -inset-8 rounded-2xl bg-primary/40 blur-3xl animate-pulse-glow" />
+            <div className="absolute -inset-8 rounded-2xl bg-primary/50 blur-3xl animate-pulse-glow" />
             
             {/* Video */}
             <video 
@@ -55,7 +58,7 @@ const HeroSection = () => {
               loop
               muted
               playsInline
-              className="relative w-full rounded-lg border border-border/50 shadow-2xl"
+              className="relative w-full rounded-xl border border-primary/20 shadow-2xl"
             />
           </div>
         </div>
