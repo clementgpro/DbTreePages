@@ -73,6 +73,10 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
+    background-image: 
+      linear-gradient(to right, hsl(205 70% 54% / 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(205 70% 54% / 0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
   }
 
   h1, h2, h3, h4, h5, h6 {
