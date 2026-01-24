@@ -17,14 +17,14 @@ const HeroSection = () => {
 
         {/* Heading */}
         <div className="mx-auto max-w-4xl text-center">
-          <p className="mb-4 text-xl text-muted-foreground font-medium animate-slide-up delay-100">
+          <h1 className="mb-2 text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl animate-slide-up delay-100">
             Visualisez vos données
-          </p>
-          <h1 className="mb-8 text-5xl font-bold leading-none tracking-tight sm:text-6xl md:text-7xl lg:text-8xl animate-slide-up delay-100">
-            <span className="gradient-text">10x plus vite</span>
           </h1>
-          <p className="mx-auto mb-10 max-w-2xl text-base text-muted-foreground animate-slide-up delay-200">
-            <span className="font-medium text-foreground/90">Fini les requêtes SQL pour voir vos jointures.</span>
+          <h2 className="mb-6 text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl animate-slide-up delay-100">
+            <span className="gradient-text">10x plus vite</span>
+          </h2>
+          <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground animate-slide-up delay-200">
+            <span className="font-semibold text-foreground">Fini les requêtes SQL pour voir vos jointures.</span>
             <br />
             Avec DbTree, naviguez dans vos relations de données en un coup d'œil.
           </p>
