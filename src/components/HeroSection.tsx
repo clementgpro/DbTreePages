@@ -31,13 +31,13 @@ const HeroSection = () => {
 
           {/* CTAs */}
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row animate-slide-up delay-300">
-            <Button variant="hero" size="xl" className="rounded-full" asChild>
+            <Button variant="hero" size="xl" asChild>
               <Link to="/download">
                 Tester gratuitement
                 <Rocket className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button variant="heroOutline" size="xl" className="rounded-full" asChild>
+            <Button variant="heroOutline" size="xl" asChild>
               <a href="#features">
                 Voir les fonctionnalités
               </a>
