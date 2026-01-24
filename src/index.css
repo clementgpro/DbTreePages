@@ -73,9 +73,9 @@
     @apply bg-background text-foreground;
     font-family: var(--font-body);
     background-image: 
-      linear-gradient(to right, hsl(205 70% 54% / 0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(205 70% 54% / 0.05) 1px, transparent 1px);
-    background-size: 32px 32px;
+      linear-gradient(to right, hsl(205 70% 54% / 0.12) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(205 70% 54% / 0.12) 1px, transparent 1px);
+    background-size: 48px 48px;
     background-attachment: fixed;
   }
 
