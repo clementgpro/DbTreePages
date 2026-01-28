@@ -17,16 +17,13 @@ const HeroSection = () => {
 
         {/* Heading */}
         <div className="mx-auto max-w-4xl text-center">
-          <h1 className="mb-2 text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl animate-slide-up delay-100">
-            Visualisez vos données
-          </h1>
-          <h2 className="mb-6 text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl animate-slide-up delay-100">
-            <span className="gradient-text">10x plus vite</span>
-          </h2>
-          <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground animate-slide-up delay-200">
-            <span className="font-semibold text-foreground">Fini les requêtes SQL pour voir vos jointures.</span>
+          <h1 className="mb-6 text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl animate-slide-up delay-100">
+            Ne lisez plus vos données.
             <br />
-            Avec DbTree, naviguez dans vos relations de données en un coup d'œil.
+            <span className="gradient-text">Explorez-les.</span>
+          </h1>
+          <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground animate-slide-up delay-200">
+            Le premier client SQL lourd conçu pour visualiser vos bases de données relationnelles sous forme d'arbre hiérarchique intuitif. Oubliez les JOIN mentaux, cliquez et déroulez vos relations instantanément.
           </p>
 
           {/* CTAs */}
