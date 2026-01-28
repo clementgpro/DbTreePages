@@ -31,7 +31,7 @@ const HeroSection = () => {
             <Button variant="hero" size="xl" asChild>
               <Link to="/download">
                 Tester gratuitement
-                <Rocket className="ml-2 h-5 w-5" />
+                <span className="ml-2">🚀</span>
               </Link>
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
