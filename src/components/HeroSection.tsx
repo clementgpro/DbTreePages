@@ -17,8 +17,10 @@ const HeroSection = () => {
 
         {/* Heading */}
         <div className="mx-auto max-w-4xl text-center">
-          <h1 className="mb-2 text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl animate-slide-up delay-100">
-            Visualisez vos données
+        <h1 className="mb-2 text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl animate-slide-up delay-100">
+            Visualisez
+            <br />
+            vos données
           </h1>
           <h2 className="mb-6 text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl animate-slide-up delay-100">
             <span className="gradient-text">10x plus vite</span>
