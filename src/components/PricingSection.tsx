@@ -17,7 +17,7 @@ const PricingSection = () => {
         </div>
 
         {/* Pricing cards */}
-        <div className="mx-auto grid max-w-4xl gap-8 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-3">
           {/* Free plan */}
           <div className="rounded-2xl border border-border bg-card p-8">
             <div className="mb-6">
@@ -95,6 +95,48 @@ const PricingSection = () => {
 
             <Button className="w-full" asChild>
               <Link to="/download">Passer à Pro</Link>
+            </Button>
+          </div>
+
+          {/* Lifetime plan */}
+          <div className="rounded-2xl border border-border bg-card p-8">
+            <div className="mb-6">
+              <h3 className="text-xl font-semibold">Lifetime</h3>
+              <p className="mt-2 text-muted-foreground">
+                Un paiement unique, à vie
+              </p>
+            </div>
+
+            <div className="mb-6">
+              <span className="text-4xl font-bold">150€</span>
+              <span className="text-muted-foreground"> une fois</span>
+            </div>
+
+            <ul className="mb-8 space-y-4">
+              <li className="flex items-start gap-3">
+                <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                <span>Accès à toutes les fonctionnalités</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                <span>Connexion à vos bases de données</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                <span>Vue hiérarchique des relations</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                <span className="font-medium">Niveaux hiérarchiques illimités</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                <span className="font-medium">Licence à vie</span>
+              </li>
+            </ul>
+
+            <Button variant="outline" className="w-full" asChild>
+              <Link to="/download">Acheter la licence</Link>
             </Button>
           </div>
         </div>
