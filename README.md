@@ -71,3 +71,10 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+TODO :
+- retirer le schéma bizarre généré par IA
+- ajouter des vs avec les outils DbSchema et Dbeaver
+- multi-lingue
+- page lemonsqueezy payante
+- lien vers le téléchargement ok
