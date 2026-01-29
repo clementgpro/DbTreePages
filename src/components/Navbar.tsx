@@ -14,13 +14,13 @@ const Navbar = () => {
 
         {/* Navigation links */}
         <div className="hidden items-center gap-8 md:flex">
-          <a href="/#features" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+          <a href="#features" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
             Fonctionnalités
           </a>
-          <a href="/#how-it-works" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+          <a href="#how-it-works" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
             Comment ça marche
           </a>
-          <a href="/#pricing" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+          <a href="#pricing" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
             Tarifs
           </a>
         </div>
