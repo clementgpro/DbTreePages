@@ -64,41 +64,6 @@ const HowItWorksSection = () => {
               </div>
             ))}
           </div>
-
-          {/* Connection flow visualization */}
-          <div className="mt-16 rounded-2xl border border-primary/20 bg-card/50 p-8">
-            <div className="flex flex-col items-center justify-center gap-4 text-center md:flex-row md:gap-8 md:text-left">
-              {/* Database */}
-              <div className="flex flex-col items-center gap-2">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-muted">
-                  <span className="text-2xl">🗄️</span>
-                </div>
-                <span className="text-sm text-muted-foreground">PostgreSQL</span>
-              </div>
-
-              <ArrowRight className="h-6 w-6 rotate-90 text-primary/50 md:rotate-0" />
-
-              {/* DbTree */}
-              <div className="flex flex-col items-center gap-2">
-                <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-primary/20 ring-2 ring-primary/50">
-                  <span className="text-3xl">🌳</span>
-                </div>
-                <span className="font-semibold text-primary">DbTree</span>
-              </div>
-
-              <ArrowRight className="h-6 w-6 rotate-90 text-primary/50 md:rotate-0" />
-
-              {/* Tree visualization */}
-              <div className="flex flex-col items-center gap-2 rounded-xl border border-border bg-background p-4">
-                <div className="font-mono text-sm">
-                  <div className="text-foreground">📁 Commandes</div>
-                  <div className="ml-4 text-muted-foreground">├─ 📄 #8821</div>
-                  <div className="ml-8 text-primary">├─ 👤 Client: Jean</div>
-                  <div className="ml-8 text-primary">└─ 📦 Produits (3)</div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
