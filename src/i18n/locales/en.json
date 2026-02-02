@@ -1,0 +1,243 @@
+{
+  "nav": {
+    "features": "Features",
+    "howItWorks": "How it works",
+    "pricing": "Pricing",
+    "download": "Download"
+  },
+  "hero": {
+    "badge": "New: Explore your data differently",
+    "title1": "Stop reading your data.",
+    "title2": "Explore it.",
+    "description": "The first desktop SQL client designed to visualize your relational databases as an intuitive hierarchical tree. Forget mental JOINs, click and expand your relationships instantly.",
+    "cta": "Try for free",
+    "ctaSecondary": "See features",
+    "stats": {
+      "faster": "Faster than SQL",
+      "queries": "Queries to write",
+      "relations": "Visible relations"
+    }
+  },
+  "features": {
+    "title": "A new way to ",
+    "titleHighlight": "explore your data",
+    "description": "No more complicated SQL queries! Instantly discover how your data is connected with a modern and powerful interface.",
+    "main": {
+      "navigation": {
+        "title": "Smart Navigation",
+        "description": "Explore your data by naturally following relationships between tables. Click to expand, navigate from one record to another while instantly visualizing parent-child links."
+      },
+      "visualization": {
+        "title": "Tree Visualization",
+        "description": "Transform your foreign keys into a clear visual structure. Understand at a glance how your tables are interconnected and discover hidden dependencies."
+      },
+      "loading": {
+        "title": "Smart Loading",
+        "description": "Thanks to lazy loading, explore millions of records without slowdown. Only the data you need is loaded at the right time."
+      },
+      "pagination": {
+        "title": "Smooth Pagination",
+        "description": "Easily browse large tables with intuitive pagination. Filter by specific ID or navigate page by page through your records."
+      }
+    },
+    "secondary": {
+      "details": {
+        "title": "One-Click Details",
+        "description": "Display all fields of a record in a dedicated panel."
+      },
+      "export": {
+        "title": "Easy Export",
+        "description": "Copy a value, field, or complete row instantly."
+      },
+      "readonly": {
+        "title": "Read Only",
+        "description": "Explore with confidence, DbTree never modifies your data."
+      },
+      "performance": {
+        "title": "Maximum Performance",
+        "description": "Optimized connection pool for smooth exploration."
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "From connection to exploration in ",
+    "titleHighlight": "3 steps",
+    "description": "Start exploring your data in minutes.",
+    "steps": {
+      "connect": {
+        "title": "Connect your DB",
+        "description": "Enter your credentials. DbTree scans the schema in read-only mode."
+      },
+      "analyze": {
+        "title": "Relationship Analysis",
+        "description": "The engine detects constraints (FK) and builds the data graph."
+      },
+      "explore": {
+        "title": "Explore in Tree Mode",
+        "description": "Navigate your tables like in your file explorer."
+      }
+    }
+  },
+  "comparison": {
+    "title": "The End of SELECT * FROM + JOIN Chaos",
+    "before": {
+      "title": "Before DbTree",
+      "subtitle": "The old way",
+      "points": [
+        "Endless SQL queries just to understand your schema",
+        "Mentally tracking foreign key relationships",
+        "Switching between multiple tabs and tools",
+        "Wasting time debugging data corruption"
+      ]
+    },
+    "after": {
+      "title": "With DbTree",
+      "subtitle": "The new way",
+      "points": [
+        "Visual tree structure reveals connections instantly",
+        "Click-to-expand navigation through relationships",
+        "Everything in one unified interface",
+        "Instantly spot data issues in context"
+      ]
+    }
+  },
+  "competitor": {
+    "title": "DbTree vs. the competition",
+    "description": "Compare DbTree with other tools on the market.",
+    "headers": {
+      "feature": "Feature",
+      "sqlClients": "SQL Clients"
+    },
+    "features": {
+      "objective": "Main objective",
+      "navigation": "Data navigation",
+      "relations": "Relations (FK / incoming)",
+      "sql": "SQL required",
+      "speed": "Speed of access",
+      "exploration": "Deep exploration",
+      "understanding": "Model understanding"
+    },
+    "values": {
+      "dbtree": {
+        "objective": "Explore data through relationships",
+        "navigation": "Real-time interactive tree",
+        "relations": "Automatic, bidirectional",
+        "speed": "Immediate",
+        "exploration": "Unlimited (lazy loading)"
+      },
+      "dbschema": {
+        "objective": "Model and document schema",
+        "navigation": "Schema diagrams",
+        "relations": "Visual, schema-centric",
+        "speed": "Medium",
+        "exploration": "Limited"
+      },
+      "classic": {
+        "objective": "Execute and write SQL queries",
+        "navigation": "Tabular results",
+        "relations": "Manual",
+        "speed": "Slow (queries)",
+        "exploration": "Manual"
+      }
+    },
+    "sql": {
+      "none": "None",
+      "occasional": "Occasional",
+      "required": "Required"
+    }
+  },
+  "pricing": {
+    "title": "Simple pricing for everyone",
+    "description": "Start for free, upgrade when you need it.",
+    "free": {
+      "name": "Free",
+      "price": "€0",
+      "period": "/month",
+      "description": "Perfect for getting started",
+      "features": [
+        "1 connection",
+        "Full tree navigation",
+        "Basic features",
+        "Community support"
+      ],
+      "cta": "Download"
+    },
+    "pro": {
+      "name": "Pro",
+      "price": "€9",
+      "period": "/month",
+      "description": "For serious developers",
+      "badge": "Popular",
+      "features": [
+        "Unlimited connections",
+        "All features",
+        "Priority support",
+        "Regular updates"
+      ],
+      "cta": "Get started"
+    },
+    "team": {
+      "name": "Team",
+      "price": "€29",
+      "period": "/month",
+      "description": "For the whole team",
+      "features": [
+        "Everything in Pro",
+        "Shared connections",
+        "Team management",
+        "Dedicated support"
+      ],
+      "cta": "Contact us"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Everything you need to know about DbTree",
+    "questions": {
+      "databases": {
+        "question": "Which databases are supported?",
+        "answer": "Currently, DbTree supports PostgreSQL (version 9.6 and above). Support for other DBMS coming soon."
+      },
+      "security": {
+        "question": "Is my data safe?",
+        "answer": "Absolutely! DbTree works in read-only mode and stores no data. All connections are direct to your database."
+      },
+      "platforms": {
+        "question": "Can I use it on Mac or Linux?",
+        "answer": "The current version is optimized for Windows. Mac and Linux versions coming soon."
+      },
+      "java": {
+        "question": "Do I need to install Java?",
+        "answer": "No! The standalone version includes everything you need. Download and run, that's it."
+      },
+      "trial": {
+        "question": "Can I try it for free?",
+        "answer": "Yes! Download the free trial version, no credit card required."
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to revolutionize your ",
+    "titleHighlight": "data exploration",
+    "description": "Join the developers who have already adopted a new way of visualizing their databases.",
+    "button": "Download now",
+    "buttonSecondary": "Contact the team",
+    "badges": "Free trial • No card required • 2-minute setup"
+  },
+  "footer": {
+    "documentation": "Documentation",
+    "changelog": "Changelog",
+    "support": "Support",
+    "copyright": "© {year} DbTree. All rights reserved."
+  },
+  "download": {
+    "back": "Back to home",
+    "title": "Download",
+    "version": "Latest version: 1.0.0 | Release date: January 10, 2026",
+    "platform": "Platform",
+    "versionCol": "Version",
+    "downloadCol": "Download",
+    "windows": "Windows x64 (Portable)",
+    "downloadButton": "Download"
+  }
+}

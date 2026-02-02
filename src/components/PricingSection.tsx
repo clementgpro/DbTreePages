@@ -1,18 +1,21 @@
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Check, Lock } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const PricingSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="pricing" className="py-24">
       <div className="container mx-auto px-4">
         {/* Section header */}
         <div className="mx-auto mb-16 max-w-2xl text-center">
           <h2 className="mb-4 text-3xl font-bold sm:text-4xl">
-            Tarifs simples et transparents
+            {t('pricing.title')}
           </h2>
           <p className="text-lg text-muted-foreground">
-            Commencez gratuitement, passez à la version Pro quand vous êtes prêt.
+            {t('pricing.description')}
           </p>
         </div>
 
@@ -21,122 +24,92 @@ const PricingSection = () => {
           {/* Free plan */}
           <div className="rounded-2xl border border-border bg-card p-8">
             <div className="mb-6">
-              <h3 className="text-xl font-semibold">Gratuit</h3>
+              <h3 className="text-xl font-semibold">{t('pricing.free.name')}</h3>
               <p className="mt-2 text-muted-foreground">
-                Parfait pour découvrir DbTree
+                {t('pricing.free.description')}
               </p>
             </div>
 
             <div className="mb-6">
-              <span className="text-4xl font-bold">0€</span>
-              <span className="text-muted-foreground">/mois</span>
+              <span className="text-4xl font-bold">{t('pricing.free.price')}</span>
+              <span className="text-muted-foreground">{t('pricing.free.period')}</span>
             </div>
 
             <ul className="mb-8 space-y-4">
-              <li className="flex items-start gap-3">
-                <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                <span>Accès à toutes les fonctionnalités</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                <span>Connexion à vos bases de données</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                <span>Vue hiérarchique des relations</span>
-              </li>
-              <li className="flex items-start gap-3 text-muted-foreground">
-                <Lock className="mt-0.5 h-5 w-5 shrink-0 text-muted-foreground" />
-                <span>Limité à 2 niveaux hiérarchiques</span>
-              </li>
+              {(t('pricing.free.features', { returnObjects: true }) as string[]).map((feature, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  {index === 3 ? (
+                    <Lock className="mt-0.5 h-5 w-5 shrink-0 text-muted-foreground" />
+                  ) : (
+                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                  )}
+                  <span className={index === 3 ? "text-muted-foreground" : ""}>{feature}</span>
+                </li>
+              ))}
             </ul>
 
             <Button variant="outline" className="w-full" asChild>
-              <Link to="/download">Commencer gratuitement</Link>
+              <Link to="/download">{t('pricing.free.cta')}</Link>
             </Button>
           </div>
 
           {/* Pro plan */}
           <div className="relative rounded-2xl border border-primary/50 bg-card p-8 glow-effect">
             <div className="absolute -top-3 right-8 rounded-full bg-primary px-3 py-1 text-xs font-medium text-primary-foreground">
-              Populaire
+              {t('pricing.pro.badge')}
             </div>
             
             <div className="mb-6">
-              <h3 className="text-xl font-semibold">Pro</h3>
+              <h3 className="text-xl font-semibold">{t('pricing.pro.name')}</h3>
               <p className="mt-2 text-muted-foreground">
-                Pour explorer sans limites
+                {t('pricing.pro.description')}
               </p>
             </div>
 
             <div className="mb-6">
-              <span className="text-4xl font-bold">5€</span>
-              <span className="text-muted-foreground">/mois</span>
+              <span className="text-4xl font-bold">{t('pricing.pro.price')}</span>
+              <span className="text-muted-foreground">{t('pricing.pro.period')}</span>
             </div>
 
             <ul className="mb-8 space-y-4">
-              <li className="flex items-start gap-3">
-                <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                <span>Accès à toutes les fonctionnalités</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                <span>Connexion à vos bases de données</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                <span>Vue hiérarchique des relations</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                <span className="font-medium">Niveaux hiérarchiques illimités</span>
-              </li>
+              {(t('pricing.pro.features', { returnObjects: true }) as string[]).map((feature, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                  <span>{feature}</span>
+                </li>
+              ))}
             </ul>
 
             <Button className="w-full" asChild>
-              <Link to="/download">Passer à Pro</Link>
+              <Link to="/download">{t('pricing.pro.cta')}</Link>
             </Button>
           </div>
 
-          {/* Lifetime plan */}
+          {/* Team plan */}
           <div className="rounded-2xl border border-border bg-card p-8">
             <div className="mb-6">
-              <h3 className="text-xl font-semibold">Lifetime</h3>
+              <h3 className="text-xl font-semibold">{t('pricing.team.name')}</h3>
               <p className="mt-2 text-muted-foreground">
-                Un paiement unique, à vie
+                {t('pricing.team.description')}
               </p>
             </div>
 
             <div className="mb-6">
-              <span className="text-4xl font-bold">150€</span>
-              <span className="text-muted-foreground"> une fois</span>
+              <span className="text-4xl font-bold">{t('pricing.team.price')}</span>
+              <span className="text-muted-foreground">{t('pricing.team.period')}</span>
             </div>
 
             <ul className="mb-8 space-y-4">
-              <li className="flex items-start gap-3">
-                <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                <span>Accès à toutes les fonctionnalités</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                <span>Connexion à vos bases de données</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                <span>Vue hiérarchique des relations</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                <span className="font-medium">Niveaux hiérarchiques illimités</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                <span className="font-medium">Licence à vie</span>
-              </li>
+              {(t('pricing.team.features', { returnObjects: true }) as string[]).map((feature, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                  <span>{feature}</span>
+                </li>
+              ))}
             </ul>
 
             <Button variant="outline" className="w-full" asChild>
-              <Link to="/download">Acheter la licence</Link>
+              <Link to="/download">{t('pricing.team.cta')}</Link>
             </Button>
           </div>
         </div>

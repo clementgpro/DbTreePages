@@ -1,35 +1,38 @@
+import { useTranslation } from "react-i18next";
 import { Plug, Brain, TreePine, ArrowRight } from "lucide-react";
 
-const steps = [
-  {
-    icon: Plug,
-    title: "Connectez votre DB",
-    description: "Entrez vos identifiants. DbTree scanne le schéma en lecture seule.",
-  },
-  {
-    icon: Brain,
-    title: "Analyse des Relations",
-    description: "Le moteur détecte les contraintes (FK) et construit le graphe de données.",
-  },
-  {
-    icon: TreePine,
-    title: "Explorez en Tree Mode",
-    description: "Naviguez dans vos tables comme dans votre explorateur de fichiers.",
-  },
-];
-
 const HowItWorksSection = () => {
+  const { t } = useTranslation();
+
+  const steps = [
+    {
+      icon: Plug,
+      titleKey: "howItWorks.steps.connect.title",
+      descriptionKey: "howItWorks.steps.connect.description",
+    },
+    {
+      icon: Brain,
+      titleKey: "howItWorks.steps.analyze.title",
+      descriptionKey: "howItWorks.steps.analyze.description",
+    },
+    {
+      icon: TreePine,
+      titleKey: "howItWorks.steps.explore.title",
+      descriptionKey: "howItWorks.steps.explore.description",
+    },
+  ];
+
   return (
     <section id="how-it-works" className="py-24">
       <div className="container mx-auto px-4">
         {/* Section header */}
         <div className="mx-auto mb-16 max-w-2xl text-center">
           <h2 className="mb-4 text-3xl font-bold sm:text-4xl">
-            De la connexion à l'exploration en{" "}
-            <span className="gradient-text">3 étapes</span>
+            {t('howItWorks.title')}
+            <span className="gradient-text">{t('howItWorks.titleHighlight')}</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Commencez à explorer vos données en quelques minutes.
+            {t('howItWorks.description')}
           </p>
         </div>
 
@@ -58,8 +61,8 @@ const HowItWorksSection = () => {
                   </div>
 
                   {/* Content */}
-                  <h3 className="mb-3 text-xl font-semibold">{step.title}</h3>
-                  <p className="text-muted-foreground">{step.description}</p>
+                  <h3 className="mb-3 text-xl font-semibold">{t(step.titleKey)}</h3>
+                  <p className="text-muted-foreground">{t(step.descriptionKey)}</p>
                 </div>
               </div>
             ))}

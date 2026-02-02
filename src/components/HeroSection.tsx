@@ -1,9 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Rocket } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import demoVideo from "@/assets/demo-video.mp4";
 
 const HeroSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="relative min-h-screen overflow-hidden pt-32 pb-20 top-glow">
       <div className="container mx-auto px-4">
@@ -11,32 +14,32 @@ const HeroSection = () => {
         <div className="mb-8 flex justify-center animate-slide-up">
           <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm text-primary">
             <Sparkles className="h-4 w-4" />
-            <span>Nouveau : Explorez vos données autrement</span>
+            <span>{t('hero.badge')}</span>
           </div>
         </div>
 
         {/* Heading */}
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="mb-6 text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl animate-slide-up delay-100">
-            Ne lisez plus vos données.
+            {t('hero.title1')}
             <br />
-            <span className="gradient-text">Explorez-les.</span>
+            <span className="gradient-text">{t('hero.title2')}</span>
           </h1>
           <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground animate-slide-up delay-200">
-            Le premier client SQL lourd conçu pour visualiser vos bases de données relationnelles sous forme d'arbre hiérarchique intuitif. Oubliez les JOIN mentaux, cliquez et déroulez vos relations instantanément.
+            {t('hero.description')}
           </p>
 
           {/* CTAs */}
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row animate-slide-up delay-300">
             <Button variant="hero" size="xl" asChild>
               <Link to="/download">
-                Tester gratuitement
+                {t('hero.cta')}
                 <span className="ml-2">🚀</span>
               </Link>
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
               <a href="#features">
-                Voir les fonctionnalités
+                {t('hero.ctaSecondary')}
               </a>
             </Button>
           </div>
@@ -45,9 +48,9 @@ const HeroSection = () => {
         {/* Stats */}
         <div className="mx-auto mt-16 grid max-w-3xl grid-cols-1 gap-8 sm:grid-cols-3 animate-slide-up delay-300">
           {[
-            { value: "10x", label: "Plus rapide que SQL" },
-            { value: "0", label: "Requête à écrire" },
-            { value: "∞", label: "Relations visibles" },
+            { value: "10x", label: t('hero.stats.faster') },
+            { value: "0", label: t('hero.stats.queries') },
+            { value: "∞", label: t('hero.stats.relations') },
           ].map((stat, index) => (
             <div key={index} className="text-center">
               <div className="mb-2 text-4xl font-bold gradient-text sm:text-5xl">
