@@ -1,7 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, TreePine } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import appIcon from "@/assets/app-icon.png";
 
 const CTASection = () => {
   const { t } = useTranslation();
@@ -17,7 +18,7 @@ const CTASection = () => {
           <div className="relative text-center">
             {/* Icon */}
             <div className="mx-auto mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10">
-              <TreePine className="h-8 w-8 text-primary" />
+              <img src={appIcon} alt="DbTree" className="h-10 w-10" />
             </div>
 
             {/* Content */}
