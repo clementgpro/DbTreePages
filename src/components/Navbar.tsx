@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import appIcon from "@/assets/app-icon.png";
-import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navbar = () => {
   const { t } = useTranslation();
@@ -29,9 +28,8 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* CTA + Language Switcher */}
+        {/* CTA */}
         <div className="flex items-center gap-3">
-          <LanguageSwitcher />
           <Button size="sm" asChild>
             <Link to="/download">{t('nav.download')}</Link>
           </Button>
