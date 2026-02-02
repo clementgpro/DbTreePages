@@ -75,7 +75,7 @@ const PricingSection = () => {
               {(t('pricing.pro.features', { returnObjects: true }) as string[]).map((feature, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                  <span>{feature}</span>
+                  <span className={index === 3 ? "font-medium" : ""}>{feature}</span>
                 </li>
               ))}
             </ul>
@@ -85,31 +85,31 @@ const PricingSection = () => {
             </Button>
           </div>
 
-          {/* Team plan */}
+          {/* Lifetime plan */}
           <div className="rounded-2xl border border-border bg-card p-8">
             <div className="mb-6">
-              <h3 className="text-xl font-semibold">{t('pricing.team.name')}</h3>
+              <h3 className="text-xl font-semibold">{t('pricing.lifetime.name')}</h3>
               <p className="mt-2 text-muted-foreground">
-                {t('pricing.team.description')}
+                {t('pricing.lifetime.description')}
               </p>
             </div>
 
             <div className="mb-6">
-              <span className="text-4xl font-bold">{t('pricing.team.price')}</span>
-              <span className="text-muted-foreground">{t('pricing.team.period')}</span>
+              <span className="text-4xl font-bold">{t('pricing.lifetime.price')}</span>
+              <span className="text-muted-foreground">{t('pricing.lifetime.period')}</span>
             </div>
 
             <ul className="mb-8 space-y-4">
-              {(t('pricing.team.features', { returnObjects: true }) as string[]).map((feature, index) => (
+              {(t('pricing.lifetime.features', { returnObjects: true }) as string[]).map((feature, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                  <span>{feature}</span>
+                  <span className={index === 3 || index === 4 ? "font-medium" : ""}>{feature}</span>
                 </li>
               ))}
             </ul>
 
             <Button variant="outline" className="w-full" asChild>
-              <Link to="/download">{t('pricing.team.cta')}</Link>
+              <Link to="/download">{t('pricing.lifetime.cta')}</Link>
             </Button>
           </div>
         </div>

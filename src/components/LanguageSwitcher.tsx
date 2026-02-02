@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -15,8 +16,33 @@ const languages = [
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
+  const location = useLocation();
 
   const currentLang = languages.find((l) => l.code === i18n.language) || languages[0];
+
+  const switchLanguage = (langCode: string) => {
+    const currentPath = location.pathname;
+
+    if (langCode === 'fr') {
+      // Switch to French version
+      if (currentPath.startsWith('/fr')) {
+        // Already on French version, do nothing
+        return;
+      }
+      // Navigate to French version
+      const frPath = currentPath === '/' ? '/fr/' : `/fr${currentPath}`;
+      window.location.href = frPath;
+    } else {
+      // Switch to English version
+      if (!currentPath.startsWith('/fr')) {
+        // Already on English version, do nothing
+        return;
+      }
+      // Navigate to English version (remove /fr prefix)
+      const enPath = currentPath.replace(/^\/fr/, '') || '/';
+      window.location.href = enPath;
+    }
+  };
 
   return (
     <DropdownMenu>
@@ -30,7 +56,7 @@ const LanguageSwitcher = () => {
         {languages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
-            onClick={() => i18n.changeLanguage(lang.code)}
+            onClick={() => switchLanguage(lang.code)}
             className={i18n.language === lang.code ? 'bg-accent' : ''}
           >
             <span className="mr-2">{lang.flag}</span>

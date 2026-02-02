@@ -147,47 +147,48 @@
     }
   },
   "pricing": {
-    "title": "Un tarif simple pour tous",
-    "description": "Commencez gratuitement, évoluez selon vos besoins.",
+    "title": "Tarifs simples et transparents",
+    "description": "Commencez gratuitement, passez à la version Pro quand vous êtes prêt.",
     "free": {
       "name": "Gratuit",
       "price": "0€",
       "period": "/mois",
-      "description": "Parfait pour démarrer",
+      "description": "Parfait pour découvrir DbTree",
       "features": [
-        "1 connexion",
-        "Navigation arbre complète",
-        "Fonctionnalités de base",
-        "Support communautaire"
+        "Accès à toutes les fonctionnalités",
+        "Connexion à vos bases de données",
+        "Vue hiérarchique des relations",
+        "Limité à 2 niveaux hiérarchiques"
       ],
-      "cta": "Télécharger"
+      "cta": "Commencer gratuitement"
     },
     "pro": {
       "name": "Pro",
-      "price": "9€",
+      "price": "5€",
       "period": "/mois",
-      "description": "Pour les développeurs sérieux",
+      "description": "Pour explorer sans limites",
       "badge": "Populaire",
       "features": [
-        "Connexions illimitées",
-        "Toutes les fonctionnalités",
-        "Support prioritaire",
-        "Mises à jour régulières"
+        "Accès à toutes les fonctionnalités",
+        "Connexion à vos bases de données",
+        "Vue hiérarchique des relations",
+        "Niveaux hiérarchiques illimités"
       ],
-      "cta": "Commencer"
+      "cta": "Passer à Pro"
     },
-    "team": {
-      "name": "Team",
-      "price": "29€",
-      "period": "/mois",
-      "description": "Pour toute l'équipe",
+    "lifetime": {
+      "name": "Lifetime",
+      "price": "150€",
+      "period": " une fois",
+      "description": "Un paiement unique, à vie",
       "features": [
-        "Tout de Pro",
-        "Connexions partagées",
-        "Gestion d'équipe",
-        "Support dédié"
+        "Accès à toutes les fonctionnalités",
+        "Connexion à vos bases de données",
+        "Vue hiérarchique des relations",
+        "Niveaux hiérarchiques illimités",
+        "Licence à vie"
       ],
-      "cta": "Nous contacter"
+      "cta": "Acheter la licence"
     }
   },
   "faq": {

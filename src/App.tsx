@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Download from "./pages/Download";
 import NotFound from "./pages/NotFound";
+import { LanguageSuggestionBanner } from "./components/LanguageSuggestionBanner";
 
 const queryClient = new QueryClient();
 
@@ -14,10 +15,16 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/DbTreePages">
+      <LanguageSuggestionBanner />
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/download" element={<Download />} />
+
+          {/* French routes */}
+          <Route path="/fr" element={<Index />} />
+
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

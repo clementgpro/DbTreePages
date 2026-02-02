@@ -147,47 +147,48 @@
     }
   },
   "pricing": {
-    "title": "Simple pricing for everyone",
-    "description": "Start for free, upgrade when you need it.",
+    "title": "Simple and transparent pricing",
+    "description": "Start for free, upgrade to Pro when you're ready.",
     "free": {
       "name": "Free",
       "price": "€0",
       "period": "/month",
-      "description": "Perfect for getting started",
+      "description": "Perfect for discovering DbTree",
       "features": [
-        "1 connection",
-        "Full tree navigation",
-        "Basic features",
-        "Community support"
+        "Access to all features",
+        "Connect to your databases",
+        "Hierarchical relationship view",
+        "Limited to 2 hierarchical levels"
       ],
-      "cta": "Download"
+      "cta": "Start for free"
     },
     "pro": {
       "name": "Pro",
-      "price": "€9",
+      "price": "€5",
       "period": "/month",
-      "description": "For serious developers",
+      "description": "Explore without limits",
       "badge": "Popular",
       "features": [
-        "Unlimited connections",
-        "All features",
-        "Priority support",
-        "Regular updates"
+        "Access to all features",
+        "Connect to your databases",
+        "Hierarchical relationship view",
+        "Unlimited hierarchical levels"
       ],
-      "cta": "Get started"
+      "cta": "Upgrade to Pro"
     },
-    "team": {
-      "name": "Team",
-      "price": "€29",
-      "period": "/month",
-      "description": "For the whole team",
+    "lifetime": {
+      "name": "Lifetime",
+      "price": "€150",
+      "period": " once",
+      "description": "One payment, lifetime access",
       "features": [
-        "Everything in Pro",
-        "Shared connections",
-        "Team management",
-        "Dedicated support"
+        "Access to all features",
+        "Connect to your databases",
+        "Hierarchical relationship view",
+        "Unlimited hierarchical levels",
+        "Lifetime license"
       ],
-      "cta": "Contact us"
+      "cta": "Buy license"
     }
   },
   "faq": {
