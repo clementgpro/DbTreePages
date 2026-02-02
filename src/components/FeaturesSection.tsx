@@ -1,70 +1,73 @@
+import { useTranslation } from "react-i18next";
 import { GitBranch, Zap, Eye, Layers, MousePointerClick, Copy, Shield, Gauge } from "lucide-react";
 
-const mainFeatures = [
-  {
-    icon: GitBranch,
-    title: "Navigation Intelligente",
-    description: "Explorez vos données en suivant naturellement les relations entre tables. Cliquez pour déplier, naviguez d'un enregistrement à l'autre en visualisant instantanément les liens parent-enfant.",
-    gradient: "from-emerald-500/20 to-teal-500/20",
-    iconColor: "text-emerald-500"
-  },
-  {
-    icon: Eye,
-    title: "Visualisation en Arborescence",
-    description: "Transformez vos clés étrangères en une structure visuelle claire. Comprenez en un coup d'œil comment vos tables sont interconnectées et découvrez les dépendances cachées.",
-    gradient: "from-blue-500/20 to-indigo-500/20",
-    iconColor: "text-blue-500"
-  },
-  {
-    icon: Zap,
-    title: "Chargement Intelligent",
-    description: "Grâce au lazy loading, explorez des millions d'enregistrements sans ralentissement. Seules les données dont vous avez besoin sont chargées au moment opportun.",
-    gradient: "from-amber-500/20 to-orange-500/20",
-    iconColor: "text-amber-500"
-  },
-  {
-    icon: Layers,
-    title: "Pagination Fluide",
-    description: "Parcourez facilement de grandes tables avec une pagination intuitive. Filtrez par ID spécifique ou naviguez page par page à travers vos enregistrements.",
-    gradient: "from-purple-500/20 to-pink-500/20",
-    iconColor: "text-purple-500"
-  }
-];
-
-const secondaryFeatures = [
-  {
-    icon: MousePointerClick,
-    title: "Détails en Un Clic",
-    description: "Affichez tous les champs d'un enregistrement dans un panneau dédié."
-  },
-  {
-    icon: Copy,
-    title: "Export Facile",
-    description: "Copiez une valeur, un champ ou une ligne complète instantanément."
-  },
-  {
-    icon: Shield,
-    title: "Lecture Seule",
-    description: "Explorez en toute confiance, DbTree ne modifie jamais vos données."
-  },
-  {
-    icon: Gauge,
-    title: "Performance Maximale",
-    description: "Pool de connexions optimisé pour une exploration fluide."
-  }
-];
-
 const FeaturesSection = () => {
+  const { t } = useTranslation();
+
+  const mainFeatures = [
+    {
+      icon: GitBranch,
+      titleKey: "features.main.navigation.title",
+      descriptionKey: "features.main.navigation.description",
+      gradient: "from-emerald-500/20 to-teal-500/20",
+      iconColor: "text-emerald-500"
+    },
+    {
+      icon: Eye,
+      titleKey: "features.main.visualization.title",
+      descriptionKey: "features.main.visualization.description",
+      gradient: "from-blue-500/20 to-indigo-500/20",
+      iconColor: "text-blue-500"
+    },
+    {
+      icon: Zap,
+      titleKey: "features.main.loading.title",
+      descriptionKey: "features.main.loading.description",
+      gradient: "from-amber-500/20 to-orange-500/20",
+      iconColor: "text-amber-500"
+    },
+    {
+      icon: Layers,
+      titleKey: "features.main.pagination.title",
+      descriptionKey: "features.main.pagination.description",
+      gradient: "from-purple-500/20 to-pink-500/20",
+      iconColor: "text-purple-500"
+    }
+  ];
+
+  const secondaryFeatures = [
+    {
+      icon: MousePointerClick,
+      titleKey: "features.secondary.details.title",
+      descriptionKey: "features.secondary.details.description"
+    },
+    {
+      icon: Copy,
+      titleKey: "features.secondary.export.title",
+      descriptionKey: "features.secondary.export.description"
+    },
+    {
+      icon: Shield,
+      titleKey: "features.secondary.readonly.title",
+      descriptionKey: "features.secondary.readonly.description"
+    },
+    {
+      icon: Gauge,
+      titleKey: "features.secondary.performance.title",
+      descriptionKey: "features.secondary.performance.description"
+    }
+  ];
+
   return (
     <section id="features" className="py-24">
       <div className="container mx-auto px-4">
         {/* Section header */}
         <div className="mx-auto mb-16 max-w-2xl text-center">
           <h2 className="mb-4 text-3xl font-bold sm:text-4xl">
-            Une nouvelle façon d'<span className="gradient-text">explorer vos données</span>
+            {t('features.title')}<span className="gradient-text">{t('features.titleHighlight')}</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Fini les requêtes SQL compliquées ! Découvrez instantanément comment vos données sont connectées avec une interface moderne et puissante.
+            {t('features.description')}
           </p>
         </div>
 
@@ -85,8 +88,8 @@ const FeaturesSection = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="mb-3 text-xl font-semibold">{feature.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+                <h3 className="mb-3 text-xl font-semibold">{t(feature.titleKey)}</h3>
+                <p className="text-muted-foreground leading-relaxed">{t(feature.descriptionKey)}</p>
               </div>
             </div>
           ))}
@@ -102,8 +105,8 @@ const FeaturesSection = () => {
               <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                 <feature.icon className="h-5 w-5" />
               </div>
-              <h4 className="mb-1 font-semibold">{feature.title}</h4>
-              <p className="text-sm text-muted-foreground">{feature.description}</p>
+              <h4 className="mb-1 font-semibold">{t(feature.titleKey)}</h4>
+              <p className="text-sm text-muted-foreground">{t(feature.descriptionKey)}</p>
             </div>
           ))}
         </div>

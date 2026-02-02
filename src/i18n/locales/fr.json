@@ -1,0 +1,243 @@
+{
+  "nav": {
+    "features": "Fonctionnalités",
+    "howItWorks": "Comment ça marche",
+    "pricing": "Tarifs",
+    "download": "Télécharger"
+  },
+  "hero": {
+    "badge": "Nouveau : Explorez vos données autrement",
+    "title1": "Ne lisez plus vos données.",
+    "title2": "Explorez-les.",
+    "description": "Le premier client SQL lourd conçu pour visualiser vos bases de données relationnelles sous forme d'arbre hiérarchique intuitif. Oubliez les JOIN mentaux, cliquez et déroulez vos relations instantanément.",
+    "cta": "Tester gratuitement",
+    "ctaSecondary": "Voir les fonctionnalités",
+    "stats": {
+      "faster": "Plus rapide que SQL",
+      "queries": "Requête à écrire",
+      "relations": "Relations visibles"
+    }
+  },
+  "features": {
+    "title": "Une nouvelle façon d'",
+    "titleHighlight": "explorer vos données",
+    "description": "Fini les requêtes SQL compliquées ! Découvrez instantanément comment vos données sont connectées avec une interface moderne et puissante.",
+    "main": {
+      "navigation": {
+        "title": "Navigation Intelligente",
+        "description": "Explorez vos données en suivant naturellement les relations entre tables. Cliquez pour déplier, naviguez d'un enregistrement à l'autre en visualisant instantanément les liens parent-enfant."
+      },
+      "visualization": {
+        "title": "Visualisation en Arborescence",
+        "description": "Transformez vos clés étrangères en une structure visuelle claire. Comprenez en un coup d'œil comment vos tables sont interconnectées et découvrez les dépendances cachées."
+      },
+      "loading": {
+        "title": "Chargement Intelligent",
+        "description": "Grâce au lazy loading, explorez des millions d'enregistrements sans ralentissement. Seules les données dont vous avez besoin sont chargées au moment opportun."
+      },
+      "pagination": {
+        "title": "Pagination Fluide",
+        "description": "Parcourez facilement de grandes tables avec une pagination intuitive. Filtrez par ID spécifique ou naviguez page par page à travers vos enregistrements."
+      }
+    },
+    "secondary": {
+      "details": {
+        "title": "Détails en Un Clic",
+        "description": "Affichez tous les champs d'un enregistrement dans un panneau dédié."
+      },
+      "export": {
+        "title": "Export Facile",
+        "description": "Copiez une valeur, un champ ou une ligne complète instantanément."
+      },
+      "readonly": {
+        "title": "Lecture Seule",
+        "description": "Explorez en toute confiance, DbTree ne modifie jamais vos données."
+      },
+      "performance": {
+        "title": "Performance Maximale",
+        "description": "Pool de connexions optimisé pour une exploration fluide."
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "De la connexion à l'exploration en ",
+    "titleHighlight": "3 étapes",
+    "description": "Commencez à explorer vos données en quelques minutes.",
+    "steps": {
+      "connect": {
+        "title": "Connectez votre DB",
+        "description": "Entrez vos identifiants. DbTree scanne le schéma en lecture seule."
+      },
+      "analyze": {
+        "title": "Analyse des Relations",
+        "description": "Le moteur détecte les contraintes (FK) et construit le graphe de données."
+      },
+      "explore": {
+        "title": "Explorez en Tree Mode",
+        "description": "Naviguez dans vos tables comme dans votre explorateur de fichiers."
+      }
+    }
+  },
+  "comparison": {
+    "title": "La fin du chaos SELECT * FROM + JOIN",
+    "before": {
+      "title": "Avant DbTree",
+      "subtitle": "L'ancienne méthode",
+      "points": [
+        "Des requêtes SQL interminables juste pour comprendre votre schéma",
+        "Suivre mentalement les relations de clés étrangères",
+        "Jongler entre plusieurs onglets et outils",
+        "Perdre du temps à débugger la corruption de données"
+      ]
+    },
+    "after": {
+      "title": "Avec DbTree",
+      "subtitle": "La nouvelle méthode",
+      "points": [
+        "La structure en arbre révèle les connexions instantanément",
+        "Navigation clic-pour-déplier à travers les relations",
+        "Tout dans une interface unifiée",
+        "Repérer instantanément les problèmes de données en contexte"
+      ]
+    }
+  },
+  "competitor": {
+    "title": "DbTree vs. la concurrence",
+    "description": "Comparez DbTree avec les autres outils du marché.",
+    "headers": {
+      "feature": "Fonctionnalité",
+      "sqlClients": "Clients SQL"
+    },
+    "features": {
+      "objective": "Objectif principal",
+      "navigation": "Navigation des données",
+      "relations": "Relations (FK / entrantes)",
+      "sql": "SQL requis",
+      "speed": "Rapidité d'accès",
+      "exploration": "Exploration profonde",
+      "understanding": "Compréhension d'un modèle"
+    },
+    "values": {
+      "dbtree": {
+        "objective": "Explorer les données via leurs relations",
+        "navigation": "Arborescence interactive en temps réel",
+        "relations": "Automatiques, bidirectionnelles",
+        "speed": "Immédiate",
+        "exploration": "Illimitée (lazy loading)"
+      },
+      "dbschema": {
+        "objective": "Modéliser et documenter le schéma",
+        "navigation": "Diagrammes de schéma",
+        "relations": "Visuelles, schéma-centrées",
+        "speed": "Moyenne",
+        "exploration": "Limitée"
+      },
+      "classic": {
+        "objective": "Exécuter et écrire des requêtes SQL",
+        "navigation": "Résultats tabulaires",
+        "relations": "Manuelles",
+        "speed": "Lente (requêtes)",
+        "exploration": "Manuelle"
+      }
+    },
+    "sql": {
+      "none": "Aucun",
+      "occasional": "Occasionnel",
+      "required": "Indispensable"
+    }
+  },
+  "pricing": {
+    "title": "Un tarif simple pour tous",
+    "description": "Commencez gratuitement, évoluez selon vos besoins.",
+    "free": {
+      "name": "Gratuit",
+      "price": "0€",
+      "period": "/mois",
+      "description": "Parfait pour démarrer",
+      "features": [
+        "1 connexion",
+        "Navigation arbre complète",
+        "Fonctionnalités de base",
+        "Support communautaire"
+      ],
+      "cta": "Télécharger"
+    },
+    "pro": {
+      "name": "Pro",
+      "price": "9€",
+      "period": "/mois",
+      "description": "Pour les développeurs sérieux",
+      "badge": "Populaire",
+      "features": [
+        "Connexions illimitées",
+        "Toutes les fonctionnalités",
+        "Support prioritaire",
+        "Mises à jour régulières"
+      ],
+      "cta": "Commencer"
+    },
+    "team": {
+      "name": "Team",
+      "price": "29€",
+      "period": "/mois",
+      "description": "Pour toute l'équipe",
+      "features": [
+        "Tout de Pro",
+        "Connexions partagées",
+        "Gestion d'équipe",
+        "Support dédié"
+      ],
+      "cta": "Nous contacter"
+    }
+  },
+  "faq": {
+    "title": "Questions Fréquentes",
+    "description": "Tout ce que vous devez savoir sur DbTree",
+    "questions": {
+      "databases": {
+        "question": "Quelles bases de données sont supportées ?",
+        "answer": "Actuellement, DbTree supporte PostgreSQL (version 9.6 et supérieures). Support d'autres SGBD à venir."
+      },
+      "security": {
+        "question": "Mes données sont-elles en sécurité ?",
+        "answer": "Absolument ! DbTree fonctionne en mode lecture seule et ne stocke aucune donnée. Toutes les connexions sont directes à votre base."
+      },
+      "platforms": {
+        "question": "Puis-je l'utiliser sur Mac ou Linux ?",
+        "answer": "La version actuelle est optimisée pour Windows. Versions Mac et Linux prévues prochainement."
+      },
+      "java": {
+        "question": "Faut-il installer Java ?",
+        "answer": "Non ! La version standalone inclut tout le nécessaire. Téléchargez et lancez, c'est tout."
+      },
+      "trial": {
+        "question": "Puis-je l'essayer gratuitement ?",
+        "answer": "Oui ! Téléchargez la version d'essai gratuite, aucune carte bancaire requise."
+      }
+    }
+  },
+  "cta": {
+    "title": "Prêt à révolutionner votre ",
+    "titleHighlight": "exploration de données",
+    "description": "Rejoignez les développeurs qui ont déjà adopté une nouvelle façon de visualiser leurs bases de données.",
+    "button": "Télécharger maintenant",
+    "buttonSecondary": "Contacter l'équipe",
+    "badges": "Essai gratuit • Aucune carte requise • Configuration en 2 minutes"
+  },
+  "footer": {
+    "documentation": "Documentation",
+    "changelog": "Changelog",
+    "support": "Support",
+    "copyright": "© {year} DbTree. Tous droits réservés."
+  },
+  "download": {
+    "back": "Retour à l'accueil",
+    "title": "Télécharger",
+    "version": "Dernière version : 1.0.0 | Date de sortie : 10 janvier 2026",
+    "platform": "Plateforme",
+    "versionCol": "Version",
+    "downloadCol": "Téléchargement",
+    "windows": "Windows x64 (Portable)",
+    "downloadButton": "Télécharger"
+  }
+}

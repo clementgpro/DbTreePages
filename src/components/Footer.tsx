@@ -1,7 +1,10 @@
+import { useTranslation } from "react-i18next";
 import { Github, Twitter } from "lucide-react";
 import appIcon from "@/assets/app-icon.png";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="border-t border-border/50 bg-card py-12">
       <div className="container mx-auto px-4">
@@ -14,9 +17,9 @@ const Footer = () => {
 
           {/* Links */}
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
-            <a href="#" className="transition-colors hover:text-foreground">Documentation</a>
-            <a href="#" className="transition-colors hover:text-foreground">Changelog</a>
-            <a href="#" className="transition-colors hover:text-foreground">Support</a>
+            <a href="#" className="transition-colors hover:text-foreground">{t('footer.documentation')}</a>
+            <a href="#" className="transition-colors hover:text-foreground">{t('footer.changelog')}</a>
+            <a href="#" className="transition-colors hover:text-foreground">{t('footer.support')}</a>
           </div>
 
           {/* Social */}
@@ -38,7 +41,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="mt-8 text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} DbTree. Tous droits réservés.
+          {t('footer.copyright', { year: new Date().getFullYear() })}
         </div>
       </div>
     </footer>

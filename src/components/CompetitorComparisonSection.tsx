@@ -1,57 +1,60 @@
+import { useTranslation } from "react-i18next";
 import { Check, X, Minus } from "lucide-react";
 
 const CompetitorComparisonSection = () => {
+  const { t } = useTranslation();
+
   const features = [
     {
-      name: "Objectif principal",
-      dbtree: "Explorer les données via leurs relations",
-      dbschema: "Modéliser et documenter le schéma",
-      classic: "Exécuter et écrire des requêtes SQL",
+      nameKey: "competitor.features.objective",
+      dbtreeKey: "competitor.values.dbtree.objective",
+      dbschemaKey: "competitor.values.dbschema.objective",
+      classicKey: "competitor.values.classic.objective",
     },
     {
-      name: "Navigation des données",
-      dbtree: "Arborescence interactive en temps réel",
-      dbschema: "Diagrammes de schéma",
-      classic: "Résultats tabulaires",
+      nameKey: "competitor.features.navigation",
+      dbtreeKey: "competitor.values.dbtree.navigation",
+      dbschemaKey: "competitor.values.dbschema.navigation",
+      classicKey: "competitor.values.classic.navigation",
     },
     {
-      name: "Relations (FK / entrantes)",
-      dbtree: "Automatiques, bidirectionnelles",
-      dbschema: "Visuelles, schéma-centrées",
-      classic: "Manuelles",
+      nameKey: "competitor.features.relations",
+      dbtreeKey: "competitor.values.dbtree.relations",
+      dbschemaKey: "competitor.values.dbschema.relations",
+      classicKey: "competitor.values.classic.relations",
     },
     {
-      name: "SQL requis",
+      nameKey: "competitor.features.sql",
       dbtree: "none",
       dbschema: "partial",
       classic: "required",
     },
     {
-      name: "Rapidité d'accès",
-      dbtree: "Immédiate",
-      dbschema: "Moyenne",
-      classic: "Lente (requêtes)",
+      nameKey: "competitor.features.speed",
+      dbtreeKey: "competitor.values.dbtree.speed",
+      dbschemaKey: "competitor.values.dbschema.speed",
+      classicKey: "competitor.values.classic.speed",
     },
     {
-      name: "Exploration profonde",
-      dbtree: "Illimitée (lazy loading)",
-      dbschema: "Limitée",
-      classic: "Manuelle",
+      nameKey: "competitor.features.exploration",
+      dbtreeKey: "competitor.values.dbtree.exploration",
+      dbschemaKey: "competitor.values.dbschema.exploration",
+      classicKey: "competitor.values.classic.exploration",
     },
     {
-      name: "Compréhension d'un modèle",
+      nameKey: "competitor.features.understanding",
       dbtree: 5,
       dbschema: 3,
       classic: 2,
     },
   ];
 
-  const renderCell = (value: string | number) => {
+  const renderCell = (value: string | number | undefined, key?: string) => {
     if (value === "none") {
       return (
         <span className="inline-flex items-center gap-1.5 text-primary">
           <Check className="h-4 w-4" />
-          <span>Aucun</span>
+          <span>{t('competitor.sql.none')}</span>
         </span>
       );
     }
@@ -59,7 +62,7 @@ const CompetitorComparisonSection = () => {
       return (
         <span className="inline-flex items-center gap-1.5 text-yellow-500">
           <Minus className="h-4 w-4" />
-          <span>Occasionnel</span>
+          <span>{t('competitor.sql.occasional')}</span>
         </span>
       );
     }
@@ -67,7 +70,7 @@ const CompetitorComparisonSection = () => {
       return (
         <span className="inline-flex items-center gap-1.5 text-destructive">
           <X className="h-4 w-4" />
-          <span>Indispensable</span>
+          <span>{t('competitor.sql.required')}</span>
         </span>
       );
     }
@@ -85,6 +88,9 @@ const CompetitorComparisonSection = () => {
         </div>
       );
     }
+    if (key) {
+      return <span>{t(key)}</span>;
+    }
     return <span>{value}</span>;
   };
 
@@ -94,10 +100,10 @@ const CompetitorComparisonSection = () => {
         {/* Section header */}
         <div className="mx-auto mb-16 max-w-2xl text-center">
           <h2 className="mb-4 text-3xl font-bold sm:text-4xl">
-            DbTree vs. la concurrence
+            {t('competitor.title')}
           </h2>
           <p className="text-lg text-muted-foreground">
-            Comparez DbTree avec les autres outils du marché.
+            {t('competitor.description')}
           </p>
         </div>
 
@@ -107,7 +113,7 @@ const CompetitorComparisonSection = () => {
             <thead>
               <tr className="border-b border-border">
                 <th className="py-4 px-4 text-left text-sm font-medium text-muted-foreground">
-                  Fonctionnalité
+                  {t('competitor.headers.feature')}
                 </th>
                 <th className="py-4 px-4 text-center">
                   <div className="inline-flex flex-col items-center gap-1">
@@ -121,7 +127,7 @@ const CompetitorComparisonSection = () => {
                 </th>
                 <th className="py-4 px-4 text-center">
                   <div className="inline-flex flex-col items-center gap-1">
-                    <span className="text-lg font-semibold text-foreground">Clients SQL</span>
+                    <span className="text-lg font-semibold text-foreground">{t('competitor.headers.sqlClients')}</span>
                     <span className="text-xs text-muted-foreground">(DBeaver, DbVisualizer...)</span>
                   </div>
                 </th>
@@ -134,16 +140,16 @@ const CompetitorComparisonSection = () => {
                   className="border-b border-border/50 hover:bg-muted/30 transition-colors"
                 >
                   <td className="py-4 px-4 text-sm font-medium text-foreground">
-                    {feature.name}
+                    {t(feature.nameKey)}
                   </td>
                   <td className="py-4 px-4 text-center text-sm bg-primary/5">
-                    {renderCell(feature.dbtree)}
+                    {renderCell(feature.dbtree, feature.dbtreeKey)}
                   </td>
                   <td className="py-4 px-4 text-center text-sm text-muted-foreground">
-                    {renderCell(feature.dbschema)}
+                    {renderCell(feature.dbschema, feature.dbschemaKey)}
                   </td>
                   <td className="py-4 px-4 text-center text-sm text-muted-foreground">
-                    {renderCell(feature.classic)}
+                    {renderCell(feature.classic, feature.classicKey)}
                   </td>
                 </tr>
               ))}
