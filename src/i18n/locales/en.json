@@ -229,7 +229,7 @@
     "documentation": "Documentation",
     "changelog": "Changelog",
     "support": "Support",
-    "copyright": "© {year} DbTree. All rights reserved."
+    "copyright": "© {{year}} DbTree. All rights reserved."
   },
   "download": {
     "back": "Back to home",
