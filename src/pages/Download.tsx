@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+const DOWNLOAD_URL = "https://github.com/clementgpro/DbTreePages/releases/download/1.0.0/DbTree.zip";
+
 const DownloadPage = () => {
   const { t } = useTranslation();
 
@@ -56,9 +58,11 @@ const DownloadPage = () => {
                     </td>
                     <td className="px-6 py-4 text-muted-foreground">1.0.0</td>
                     <td className="px-6 py-4 text-right">
-                      <Button size="sm" className="gap-2">
-                        <Download className="h-4 w-4" />
-                        {t('download.downloadButton')}
+                      <Button size="sm" className="gap-2" asChild>
+                        <a href={DOWNLOAD_URL} download>
+                          <Download className="h-4 w-4" />
+                          {t('download.downloadButton')}
+                        </a>
                       </Button>
                     </td>
                   </tr>
