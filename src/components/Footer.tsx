@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Github, Twitter } from "lucide-react";
+import { Link } from "react-router-dom";
 import appIcon from "@/assets/app-icon.png";
 
 const Footer = () => {
@@ -15,27 +15,13 @@ const Footer = () => {
             <span className="text-xl font-bold">DbTree</span>
           </div>
 
-          {/* Links */}
-          <div className="flex items-center gap-6 text-sm text-muted-foreground">
-            <a href="#" className="transition-colors hover:text-foreground">{t('footer.documentation')}</a>
-            <a href="#" className="transition-colors hover:text-foreground">{t('footer.changelog')}</a>
-            <a href="#" className="transition-colors hover:text-foreground">{t('footer.support')}</a>
-          </div>
-
-          {/* Social */}
-          <div className="flex items-center gap-4">
-            <a 
-              href="#" 
-              className="flex h-10 w-10 items-center justify-center rounded-lg border border-border/50 text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
-            >
-              <Github className="h-5 w-5" />
-            </a>
-            <a 
-              href="#" 
-              className="flex h-10 w-10 items-center justify-center rounded-lg border border-border/50 text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
-            >
-              <Twitter className="h-5 w-5" />
-            </a>
+          {/* Legal links */}
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
+            <Link to="/terms" className="transition-colors hover:text-foreground">{t('footer.terms')}</Link>
+            <Link to="/privacy" className="transition-colors hover:text-foreground">{t('footer.privacy')}</Link>
+            <Link to="/refund" className="transition-colors hover:text-foreground">{t('footer.refund')}</Link>
+            <Link to="/legal-notice" className="transition-colors hover:text-foreground">{t('footer.legalNotice')}</Link>
+            <Link to="/contact" className="transition-colors hover:text-foreground">{t('footer.contact')}</Link>
           </div>
         </div>
 
