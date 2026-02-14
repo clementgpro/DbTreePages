@@ -133,6 +133,49 @@
   }
 }
 
+/* Hero 3D Grid */
+.hero-grid-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  perspective: 600px;
+  pointer-events: none;
+  z-index: 0;
+  mask-image: radial-gradient(ellipse 70% 50% at 50% 40%, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 50% at 50% 40%, black 30%, transparent 80%);
+}
+
+.hero-grid {
+  position: absolute;
+  inset: -50%;
+  background-image:
+    linear-gradient(to right, hsl(205 70% 54% / 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(205 70% 54% / 0.15) 1px, transparent 1px);
+  background-size: 60px 60px;
+  transform: rotateX(45deg) translateZ(0);
+  transform-origin: center center;
+  animation: grid-drift 12s ease-in-out infinite;
+}
+
+@keyframes grid-drift {
+  0%, 100% {
+    background-position: 0px 0px;
+    transform: rotateX(45deg) rotateZ(0deg) translateZ(0);
+  }
+  25% {
+    background-position: 30px 60px;
+    transform: rotateX(48deg) rotateZ(1deg) translateZ(10px);
+  }
+  50% {
+    background-position: 60px 120px;
+    transform: rotateX(42deg) rotateZ(-0.5deg) translateZ(5px);
+  }
+  75% {
+    background-position: 30px 60px;
+    transform: rotateX(46deg) rotateZ(0.5deg) translateZ(8px);
+  }
+}
+
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }

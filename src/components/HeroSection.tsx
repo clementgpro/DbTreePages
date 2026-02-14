@@ -9,7 +9,12 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen overflow-hidden pt-32 pb-20 top-glow">
-      <div className="container mx-auto px-4">
+      {/* Animated 3D Grid Background */}
+      <div className="hero-grid-container">
+        <div className="hero-grid" />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         {/* Badge */}
         <div className="mb-8 flex justify-center animate-slide-up">
           <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm text-primary">
