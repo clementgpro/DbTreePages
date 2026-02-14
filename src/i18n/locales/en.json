@@ -226,9 +226,11 @@
     "badges": "Free trial • No card required • 2-minute setup"
   },
   "footer": {
-    "documentation": "Documentation",
-    "changelog": "Changelog",
-    "support": "Support",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "refund": "Refund Policy",
+    "legalNotice": "Legal Notice",
+    "contact": "Contact",
     "copyright": "© {{year}} DbTree. All rights reserved."
   },
   "download": {
@@ -240,5 +242,65 @@
     "downloadCol": "Download",
     "windows": "Windows x64 (Portable)",
     "downloadButton": "Download"
+  },
+  "legal": {
+    "back": "Back to home",
+    "terms": {
+      "title": "Terms & Conditions",
+      "intro": "By using DbTree, you agree to the following terms and conditions. Please read them carefully before using the software.",
+      "useTitle": "Use of the Software",
+      "useContent": "DbTree is a desktop application for visualizing relational databases. It is provided as-is for personal and professional use. You may not reverse engineer, decompile, or disassemble the software.",
+      "licenseTitle": "License",
+      "licenseContent": "The Free plan grants a limited license to use DbTree with restricted features. The Pro and Lifetime plans grant a full license for unlimited use. Licenses are personal and non-transferable.",
+      "limitationTitle": "Limitation of Liability",
+      "limitationContent": "DbTree operates in read-only mode and does not modify your databases. However, we are not responsible for any data loss, corruption, or damage that may occur from the use of the software.",
+      "modificationTitle": "Modifications",
+      "modificationContent": "We reserve the right to modify these terms at any time. Continued use of DbTree after changes constitutes acceptance of the new terms.",
+      "contactTitle": "Contact",
+      "contactContent": "For any questions regarding these terms, please contact us at contact.dbtree@gmail.com."
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "intro": "Your privacy is important to us. This policy explains how DbTree handles your information.",
+      "collectionTitle": "Data Collection",
+      "collectionContent": "DbTree does not collect, store, or transmit any of your database data. All connections are made directly from your machine to your database server. We may collect anonymous usage statistics (feature usage, crash reports) to improve the software.",
+      "usageTitle": "Use of Information",
+      "usageContent": "Any anonymous data collected is used solely to improve DbTree's performance and features. We never sell or share your information with third parties.",
+      "storageTitle": "Data Storage",
+      "storageContent": "Database connection credentials are stored locally on your machine only. They are never transmitted to our servers.",
+      "rightsTitle": "Your Rights",
+      "rightsContent": "You can delete all locally stored data at any time by uninstalling DbTree. If you have a Pro account, you can request deletion of your account data by contacting us.",
+      "contactTitle": "Contact",
+      "contactContent": "For privacy-related inquiries, reach us at contact.dbtree@gmail.com."
+    },
+    "refund": {
+      "title": "Refund Policy",
+      "intro": "We want you to be satisfied with your purchase. Here is our refund policy.",
+      "eligibilityTitle": "Eligibility",
+      "eligibilityContent": "You may request a full refund within 14 days of your purchase if DbTree does not meet your expectations. This applies to both Pro monthly subscriptions and Lifetime licenses.",
+      "processTitle": "Refund Process",
+      "processContent": "To request a refund, send an email to contact.dbtree@gmail.com with your purchase details (order number, email used for purchase). Refunds are processed within 5-10 business days.",
+      "exclusionsTitle": "Exclusions",
+      "exclusionsContent": "Refunds are not available after 14 days from the purchase date. If you have already received a refund for a previous purchase, additional refund requests may be declined.",
+      "contactTitle": "Contact",
+      "contactContent": "For refund requests, email us at contact.dbtree@gmail.com."
+    },
+    "notice": {
+      "title": "Legal Notice",
+      "publisherTitle": "Publisher",
+      "publisherContent": "DbTree is published by an independent developer. Contact: contact.dbtree@gmail.com.",
+      "hostingTitle": "Hosting",
+      "hostingContent": "This website is hosted by GitHub Pages / Lovable. The desktop application runs locally on your machine.",
+      "ipTitle": "Intellectual Property",
+      "ipContent": "All content, design, logos, and software of DbTree are protected by intellectual property laws. Any reproduction or distribution without prior written consent is prohibited.",
+      "contactTitle": "Contact",
+      "contactContent": "For any legal inquiries, contact us at contact.dbtree@gmail.com."
+    },
+    "contact": {
+      "title": "Contact",
+      "intro": "Have a question, suggestion, or need support? We'd love to hear from you.",
+      "cta": "Send us an email",
+      "response": "We typically respond within 48 hours."
+    }
   }
 }
