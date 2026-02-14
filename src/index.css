@@ -149,9 +149,9 @@
   position: absolute;
   inset: -50%;
   background-image:
-    linear-gradient(to right, hsl(205 70% 64% / 0.35) 1px, transparent 1px),
-    linear-gradient(to bottom, hsl(205 70% 64% / 0.35) 1px, transparent 1px);
-  background-size: 60px 60px;
+    linear-gradient(to right, hsl(205 70% 64% / 0.18) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(205 70% 64% / 0.18) 1px, transparent 1px);
+  background-size: 90px 90px;
   transform: rotateX(45deg) translateZ(0);
   transform-origin: center center;
   animation: grid-drift 12s ease-in-out infinite;
