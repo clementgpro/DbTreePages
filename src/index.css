@@ -73,10 +73,6 @@
     @apply text-foreground;
     font-family: var(--font-body);
     background-color: hsl(var(--background));
-    background-image:
-      linear-gradient(to right, hsl(205 70% 54% / 0.03) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(205 70% 54% / 0.03) 1px, transparent 1px);
-    background-size: 40px 40px;
   }
 
   h1, h2, h3, h4, h5, h6 {
