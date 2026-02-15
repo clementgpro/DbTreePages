@@ -38,8 +38,8 @@ const CTASection = () => {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="xl">
-                {t('cta.buttonSecondary')}
+              <Button variant="outline" size="xl" asChild>
+                <a href="mailto:contact.dbtree@gmail.com">{t('cta.buttonSecondary')}</a>
               </Button>
             </div>
 
