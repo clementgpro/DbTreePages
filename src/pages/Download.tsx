@@ -59,7 +59,7 @@ const DownloadPage = () => {
                     <td className="px-6 py-4 text-muted-foreground">1.0.0</td>
                     <td className="px-6 py-4 text-right">
                       <Button size="sm" className="gap-2" asChild>
-                        <a href={DOWNLOAD_URL} download>
+                        <a href={DOWNLOAD_URL} download data-umami-event="Click on Download" data-umami-event-nom-fichier="DbTree.zip">
                           <Download className="h-4 w-4" />
                           {t('download.downloadButton')}
                         </a>
