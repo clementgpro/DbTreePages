@@ -67,7 +67,7 @@ const HeroSection = () => {
         </div>
 
         {/* Hero Video */}
-        <div className="mx-auto mt-16 max-w-5xl animate-slide-up delay-400">
+        <div className="mx-auto mt-16 max-w-6xl animate-slide-up delay-400">
           <div className="relative">
             {/* Glow behind */}
             <div className="absolute -inset-8 rounded-2xl bg-primary/30 blur-3xl animate-pulse-glow" />
