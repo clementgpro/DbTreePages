@@ -1,7 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import appIcon from "@/assets/app-icon.png";
+
+const appIcon = "/app-icon.png";
 
 const CTASection = () => {
   const { t } = useTranslation();

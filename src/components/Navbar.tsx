@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
-import appIcon from "@/assets/app-icon.png";
+
+const appIcon = "/app-icon.png";
 
 const Navbar = () => {
   const { t } = useTranslation();

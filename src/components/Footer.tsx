@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
-import appIcon from "@/assets/app-icon.png";
+
+const appIcon = "/app-icon.png";
 
 const Footer = () => {
   const { t } = useTranslation();

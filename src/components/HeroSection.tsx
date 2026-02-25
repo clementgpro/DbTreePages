@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import demoVideo from "@/assets/demo-video.mp4";
+
+const demoVideo = "/demo-video.mp4";
 
 const HeroSection = () => {
   const { t } = useTranslation();
