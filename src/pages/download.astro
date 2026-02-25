@@ -1,0 +1,15 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Providers from '@/components/Providers';
+import DownloadPage from '@/views/Download';
+---
+
+<BaseLayout
+  title="Download DbTree — Windows SQL Tree Client"
+  description="Download DbTree for Windows. The desktop SQL client that visualizes your database as an intuitive hierarchical tree."
+>
+  <Providers client:load>
+    <DownloadPage client:load />
+  </Providers>
+</BaseLayout>
+

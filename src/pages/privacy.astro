@@ -1,0 +1,15 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Providers from '@/components/Providers';
+import Privacy from '@/views/Privacy';
+---
+
+<BaseLayout
+  title="Privacy Policy — DbTree"
+  description="Read the Privacy Policy for DbTree. We respect your data and never collect personal information."
+>
+  <Providers client:load>
+    <Privacy client:load />
+  </Providers>
+</BaseLayout>
+

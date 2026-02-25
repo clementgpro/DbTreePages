@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
 import appIcon from "@/assets/app-icon.png";
 
 const CTASection = () => {
@@ -33,10 +32,10 @@ const CTASection = () => {
             {/* CTAs */}
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button variant="hero" size="xl" asChild>
-                <Link to="/download">
+                <a href="/download">
                   {t('cta.button')}
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+                </a>
               </Button>
               <Button variant="outline" size="xl" asChild>
                 <a href="mailto:contact.dbtree@gmail.com">{t('cta.buttonSecondary')}</a>

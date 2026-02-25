@@ -1,0 +1,15 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Providers from '@/components/Providers';
+import Index from '@/views/Index';
+---
+
+<BaseLayout
+  title="DbTree — Explore your database as a tree"
+  description="The first desktop SQL client designed to visualize your relational databases as an intuitive hierarchical tree. Forget mental JOINs, click and expand your relationships instantly."
+>
+  <Providers client:load>
+    <Index client:load />
+  </Providers>
+</BaseLayout>
+

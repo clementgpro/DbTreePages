@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 import appIcon from "@/assets/app-icon.png";
 
 const Footer = () => {
@@ -17,11 +16,11 @@ const Footer = () => {
 
           {/* Legal links */}
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
-            <Link to="/terms" className="transition-colors hover:text-foreground">{t('footer.terms')}</Link>
-            <Link to="/privacy" className="transition-colors hover:text-foreground">{t('footer.privacy')}</Link>
-            <Link to="/refund" className="transition-colors hover:text-foreground">{t('footer.refund')}</Link>
-            <Link to="/legal-notice" className="transition-colors hover:text-foreground">{t('footer.legalNotice')}</Link>
-            <Link to="/contact" className="transition-colors hover:text-foreground">{t('footer.contact')}</Link>
+            <a href="/terms" className="transition-colors hover:text-foreground">{t('footer.terms')}</a>
+            <a href="/privacy" className="transition-colors hover:text-foreground">{t('footer.privacy')}</a>
+            <a href="/refund" className="transition-colors hover:text-foreground">{t('footer.refund')}</a>
+            <a href="/legal-notice" className="transition-colors hover:text-foreground">{t('footer.legalNotice')}</a>
+            <a href="/contact" className="transition-colors hover:text-foreground">{t('footer.contact')}</a>
           </div>
         </div>
 

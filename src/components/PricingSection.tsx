@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Check, Lock } from "lucide-react";
-import { Link } from "react-router-dom";
+
 
 const PricingSection = () => {
   const { t } = useTranslation();
@@ -49,7 +49,7 @@ const PricingSection = () => {
             </ul>
 
             <Button variant="outline" className="w-full" asChild>
-              <Link to="/download">{t('pricing.free.cta')}</Link>
+              <a href="/download">{t('pricing.free.cta')}</a>
             </Button>
           </div>
 
@@ -81,7 +81,7 @@ const PricingSection = () => {
             </ul>
 
             <Button className="w-full" asChild>
-              <Link to="/download">{t('pricing.pro.cta')}</Link>
+              <a href="/download">{t('pricing.pro.cta')}</a>
             </Button>
           </div>
 
@@ -109,7 +109,7 @@ const PricingSection = () => {
             </ul>
 
             <Button variant="outline" className="w-full" asChild>
-              <Link to="/download">{t('pricing.lifetime.cta')}</Link>
+              <a href="/download">{t('pricing.lifetime.cta')}</a>
             </Button>
           </div>
         </div>

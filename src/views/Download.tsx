@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Download, Monitor } from "lucide-react";
-import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -16,13 +15,13 @@ const DownloadPage = () => {
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4">
           {/* Back link */}
-          <Link 
-            to="/" 
+          <a
+            href="/"
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
           >
             <ArrowLeft className="h-4 w-4" />
             {t('download.back')}
-          </Link>
+          </a>
 
           {/* Header */}
           <div className="text-center mb-4">

@@ -1,0 +1,15 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Providers from '@/components/Providers';
+import LegalNotice from '@/views/LegalNotice';
+---
+
+<BaseLayout
+  title="Legal Notice — DbTree"
+  description="Legal notice for DbTree — publisher information, hosting details and intellectual property."
+>
+  <Providers client:load>
+    <LegalNotice client:load />
+  </Providers>
+</BaseLayout>
+

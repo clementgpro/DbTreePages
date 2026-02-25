@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 import { ArrowLeft } from "lucide-react";
-import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -12,10 +11,10 @@ const Refund = () => {
       <Navbar />
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 max-w-3xl">
-          <Link to="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8">
+          <a href="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8">
             <ArrowLeft className="h-4 w-4" />
             {t('legal.back')}
-          </Link>
+          </a>
           <h1 className="text-4xl font-bold mb-8">{t('legal.refund.title')}</h1>
           <div className="prose prose-invert max-w-none space-y-6 text-muted-foreground">
             <p>{t('legal.refund.intro')}</p>

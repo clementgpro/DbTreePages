@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import demoVideo from "@/assets/demo-video.mp4";
 
@@ -37,10 +36,10 @@ const HeroSection = () => {
           {/* CTAs */}
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row animate-slide-up delay-300">
             <Button variant="hero" size="xl" asChild>
-              <Link to="/download">
+              <a href="/download">
                 {t('hero.cta')}
                 <span className="ml-2">🚀</span>
-              </Link>
+              </a>
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
               <a href="#features">

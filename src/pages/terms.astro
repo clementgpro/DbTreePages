@@ -1,0 +1,15 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Providers from '@/components/Providers';
+import Terms from '@/views/Terms';
+---
+
+<BaseLayout
+  title="Terms of Service — DbTree"
+  description="Read the Terms of Service for DbTree, the SQL tree explorer desktop application."
+>
+  <Providers client:load>
+    <Terms client:load />
+  </Providers>
+</BaseLayout>
+

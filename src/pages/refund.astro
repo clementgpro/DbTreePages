@@ -1,0 +1,15 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Providers from '@/components/Providers';
+import Refund from '@/views/Refund';
+---
+
+<BaseLayout
+  title="Refund Policy — DbTree"
+  description="Read the Refund Policy for DbTree. We offer a fair refund policy for our customers."
+>
+  <Providers client:load>
+    <Refund client:load />
+  </Providers>
+</BaseLayout>
+

@@ -1,0 +1,15 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Providers from '@/components/Providers';
+import Contact from '@/views/Contact';
+---
+
+<BaseLayout
+  title="Contact — DbTree"
+  description="Contact the DbTree team. We're happy to answer your questions."
+>
+  <Providers client:load>
+    <Contact client:load />
+  </Providers>
+</BaseLayout>
+
