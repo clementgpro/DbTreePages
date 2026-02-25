@@ -1,7 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { X, Check } from "lucide-react";
-import avantSql from "@/assets/avant-sql.png";
-import apresDbtree from "@/assets/apres-dbtree.jpg";
+
+const avantSql = "/avant-sql.png";
+const apresDbtree = "/apres-dbtree.jpg";
 
 const ComparisonSection = () => {
   const { t } = useTranslation();
