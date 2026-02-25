@@ -1,3 +1,9 @@
+/* Auto-hosted fonts — no external request, no render-blocking */
+@import '@fontsource-variable/space-grotesk';
+@import '@fontsource-variable/plus-jakarta-sans';
+@import '@fontsource/jetbrains-mono/400.css';
+@import '@fontsource/jetbrains-mono/500.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -45,8 +51,8 @@
     --shadow-glow: 0 0 80px hsl(205 70% 54% / 0.3);
     --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.4);
     
-    --font-display: 'Space Grotesk', sans-serif;
-    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --font-display: 'Space Grotesk Variable', 'Space Grotesk', sans-serif;
+    --font-body: 'Plus Jakarta Sans Variable', 'Plus Jakarta Sans', sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
 
     --sidebar-background: 220 18% 8%;

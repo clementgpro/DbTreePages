@@ -44,16 +44,44 @@ const canonical = canonicalUrl ?? siteUrl + Astro.url.pathname;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={siteUrl + ogImage} />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Google Search Console verification -->
+    <meta name="google-site-verification" content="oJCVvg2uJYqQBLw-XHYpJk6xVX-EQ2WmeShfzxU0698" />
 
-    <!-- Umami Analytics -->
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="YOUR_UMAMI_ID"></script>
+    <!--
+      CRITICAL CSS — inlined to avoid render-blocking.
+      Contains only the variables and base styles needed before
+      the main stylesheet is parsed (prevents FOUC on LCP element).
+    -->
+    <style>
+      :root {
+        --background: 220 20% 4%;
+        --foreground: 210 20% 95%;
+        --primary: 205 70% 54%;
+        --primary-foreground: 210 20% 98%;
+        --font-body: 'Plus Jakarta Sans Variable', 'Plus Jakarta Sans', sans-serif;
+        --font-display: 'Space Grotesk Variable', 'Space Grotesk', sans-serif;
+      }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background-color: hsl(220 20% 4%);
+        color: hsl(210 20% 95%);
+        font-family: var(--font-body);
+      }
+    </style>
+
+    <!-- Umami Analytics — loaded after LCP, never blocks rendering -->
+    <script>
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const s = document.createElement('script');
+          s.src = 'https://cloud.umami.is/script.js';
+          s.setAttribute('data-website-id', '01f867db-00b1-4df1-a652-4782804f5c08');
+          s.defer = true;
+          document.head.appendChild(s);
+        }, 3000);
+      });
+    </script>
   </head>
   <body>
     <slot />
