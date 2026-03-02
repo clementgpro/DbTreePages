@@ -23,9 +23,6 @@ const Navbar = () => {
           <a href="#how-it-works" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
             {t('nav.howItWorks')}
           </a>
-          <a href="#pricing" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-            {t('nav.pricing')}
-          </a>
         </div>
 
         {/* CTA */}

@@ -1,0 +1,15 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Providers from '@/components/Providers';
+import PricingPage from '@/views/Pricing';
+---
+
+<BaseLayout
+  title="Pricing - DbTree"
+  description="Choose the plan that fits your needs. Download DbTree for free or unlock the full experience with a Pro or Lifetime license."
+>
+  <Providers client:load>
+    <PricingPage client:load />
+  </Providers>
+</BaseLayout>
+

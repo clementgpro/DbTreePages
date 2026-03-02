@@ -10,7 +10,7 @@
     "title1": "Stop reading your data.",
     "title2": "Explore it.",
     "description": "The first desktop SQL client designed to visualize your relational databases as an intuitive hierarchical tree. Forget mental JOINs, click and expand your relationships instantly.",
-    "cta": "Try for free",
+    "cta": "Download",
     "ctaSecondary": "See features",
     "stats": {
       "faster": "Faster than SQL",
@@ -160,7 +160,7 @@
         "Hierarchical relationship view",
         "Limited to 2 hierarchical levels"
       ],
-      "cta": "Start for free"
+      "cta": "Download"
     },
     "pro": {
       "name": "Pro",
@@ -174,7 +174,7 @@
         "Hierarchical relationship view",
         "Unlimited hierarchical levels"
       ],
-      "cta": "Upgrade to Pro"
+      "cta": "Try for free"
     },
     "lifetime": {
       "name": "Lifetime",
@@ -188,7 +188,7 @@
         "Unlimited hierarchical levels",
         "Lifetime license"
       ],
-      "cta": "Buy license"
+      "cta": "Try for free"
     }
   },
   "faq": {

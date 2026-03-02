@@ -22,6 +22,7 @@ const Footer = () => {
             <a href="/refund" className="transition-colors hover:text-foreground">{t('footer.refund')}</a>
             <a href="/legal-notice" className="transition-colors hover:text-foreground">{t('footer.legalNotice')}</a>
             <a href="/contact" className="transition-colors hover:text-foreground">{t('footer.contact')}</a>
+            <a href="/pricing" className="transition-colors hover:text-foreground">{t('nav.pricing')}</a>
           </div>
         </div>
 
