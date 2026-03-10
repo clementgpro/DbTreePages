@@ -17,11 +17,11 @@ const Navbar = () => {
 
         {/* Navigation links */}
         <div className="hidden items-center gap-8 md:flex">
-          <a href="#features" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-            {t('nav.features')}
-          </a>
           <a href="#how-it-works" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
             {t('nav.howItWorks')}
+          </a>
+          <a href="#features" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+            {t('nav.features')}
           </a>
         </div>
 
