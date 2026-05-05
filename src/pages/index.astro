@@ -2,14 +2,174 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Providers from '@/components/Providers';
 import Index from '@/views/Index';
+
+const pageSchemas = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "DbTree",
+    "url": "https://dbtree.app",
+    "description": "The first desktop SQL client designed to visualize your relational databases as an intuitive hierarchical tree. Forget mental JOINs, click and expand your relationships instantly.",
+    "applicationCategory": "DeveloperApplication",
+    "applicationSubCategory": "DatabaseApplication",
+    "operatingSystem": "Windows 10, Windows 11",
+    "softwareVersion": "1.0.0",
+    "releaseNotes": "https://dbtree.app/download",
+    "downloadUrl": "https://github.com/clementgpro/DbTreePages/releases/download/1.0.0/DbTree.zip",
+    "installUrl": "https://dbtree.app/download",
+    "screenshot": "https://dbtree.app/hero-screenshot.jpg",
+    "featureList": [
+      "Hierarchical tree visualization of relational database relationships",
+      "PostgreSQL 9.6+ support",
+      "Read-only mode — no data modification",
+      "Lazy loading for large datasets",
+      "Foreign key auto-detection",
+      "One-click record details panel",
+      "No Java required — standalone installer"
+    ],
+    "author": {
+      "@type": "Organization",
+      "name": "DbTree",
+      "url": "https://dbtree.app",
+      "email": "contact.dbtree@gmail.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "DbTree",
+      "url": "https://dbtree.app"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Free",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "description": "Limited to 2 hierarchical levels. No credit card required.",
+        "url": "https://dbtree.app/download",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Pro",
+        "price": "5",
+        "priceCurrency": "EUR",
+        "description": "Unlimited hierarchical levels. Monthly subscription.",
+        "url": "https://dbtree.app/download",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Lifetime",
+        "price": "150",
+        "priceCurrency": "EUR",
+        "description": "One-time payment. Lifetime license. Unlimited hierarchical levels.",
+        "url": "https://dbtree.app/download",
+        "availability": "https://schema.org/InStock"
+      }
+    ],
+    "datePublished": "2026-01-10",
+    "inLanguage": "en",
+    "license": "https://dbtree.app/terms",
+    "isAccessibleForFree": true,
+    "potentialAction": {
+      "@type": "DownloadAction",
+      "target": "https://github.com/clementgpro/DbTreePages/releases/download/1.0.0/DbTree.zip"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Which databases does DbTree support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "DbTree currently supports PostgreSQL version 9.6 and above, including cloud-hosted PostgreSQL on Amazon RDS, Supabase, Neon, and Railway. The connection uses a standard PostgreSQL driver in read-only mode. Support for MySQL, MariaDB, SQLite, and Microsoft SQL Server is on the roadmap. All database credentials are stored locally on your machine and never transmitted to DbTree's servers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my database data safe with DbTree?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. DbTree operates exclusively in read-only mode and never modifies, stores, or transmits your database data. All connections are made directly from your local machine to your database server — nothing passes through DbTree's infrastructure. Your database credentials are stored locally on your machine only. You can explore your data with complete confidence that nothing will be changed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use DbTree on Mac or Linux?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The current version of DbTree is optimized for Windows 10 and Windows 11 (x64). The application is distributed as a portable zip — no installation required, just extract and run. Mac and Linux versions are actively in development and coming soon. Sign up or check back on the download page for release announcements."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to install Java to run DbTree?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. DbTree is a fully standalone application — the portable Windows zip includes the runtime and everything you need. Simply download the zip, extract it anywhere, and double-click the executable. No Java, no .NET framework, and no additional installations required. Minimum requirements: Windows 10 x64, 4 GB RAM, 100 MB disk space."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I try DbTree for free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The Free plan is available at no cost with no credit card required. It includes all core features — tree visualization, foreign key navigation, record details, and lazy loading — with navigation limited to 2 hierarchical levels. Upgrade to Pro (€5/month) for unlimited hierarchical exploration, or choose the Lifetime license (€150 one-time) for permanent unlimited access."
+        }
+      }
+    ]
+  }
+]);
 ---
 
 <BaseLayout
   title="DbTree - Explore your database as a tree"
   description="The first desktop SQL client designed to visualize your relational databases as an intuitive hierarchical tree. Forget mental JOINs, click and expand your relationships instantly."
+  schema={pageSchemas}
 >
+  <!--
+    Static SEO content block — rendered at build time, visible to AI crawlers
+    (GPTBot, ClaudeBot, PerplexityBot) that do not execute JavaScript.
+    Visually hidden from sighted users; the React component below renders the
+    full interactive UI.
+  -->
+  <div style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;" aria-hidden="true">
+    <h1>DbTree — Stop reading your data. Explore it.</h1>
+    <p>The first desktop SQL client designed to visualize your relational databases as an intuitive hierarchical tree. Forget mental JOINs, click and expand your relationships instantly.</p>
+    <h2>Features</h2>
+    <ul>
+      <li>Smart Navigation — Explore your data by naturally following relationships between tables. Click to expand, navigate from one record to another while instantly visualizing parent-child links.</li>
+      <li>Tree Visualization — Transform your foreign keys into a clear visual structure. Understand at a glance how your tables are interconnected and discover hidden dependencies.</li>
+      <li>Smart Loading — Thanks to lazy loading, explore millions of records without slowdown. Only the data you need is loaded at the right time.</li>
+      <li>Read Only — Explore with confidence, DbTree never modifies your data.</li>
+    </ul>
+<h2>Pricing</h2>
+    <ul>
+      <li>Free — €0/month. Limited to 2 hierarchical levels. No credit card required.</li>
+      <li>Pro — €5/month. Unlimited hierarchical levels.</li>
+      <li>Lifetime — €150 one-time. Unlimited hierarchical levels. Lifetime license.</li>
+    </ul>
+    <h2>Frequently Asked Questions</h2>
+    <dl>
+      <dt>Which databases does DbTree support?</dt>
+      <dd>DbTree currently supports PostgreSQL version 9.6 and above, including cloud-hosted PostgreSQL on Amazon RDS, Supabase, Neon, and Railway. Support for MySQL, MariaDB, SQLite, and Microsoft SQL Server is on the roadmap.</dd>
+      <dt>Is my database data safe with DbTree?</dt>
+      <dd>Yes. DbTree operates exclusively in read-only mode and never modifies, stores, or transmits your database data. All connections are made directly from your local machine to your database server.</dd>
+      <dt>Can I use DbTree on Mac or Linux?</dt>
+      <dd>The current version is optimized for Windows 10 and Windows 11 (x64). Mac and Linux versions are actively in development and coming soon.</dd>
+      <dt>Do I need to install Java to run DbTree?</dt>
+      <dd>No. DbTree is a fully standalone application. Simply download the zip, extract it, and run. No Java, no .NET framework, and no additional installations required.</dd>
+      <dt>Can I try DbTree for free?</dt>
+      <dd>Yes. The Free plan is available at no cost with no credit card required. It includes all core features with navigation limited to 2 hierarchical levels. Upgrade to Pro (€5/month) or Lifetime (€150) for unlimited access.</dd>
+    </dl>
+    <a href="/download">Download DbTree for free</a>
+    <a href="/contact">Contact DbTree</a>
+  </div>
+
   <Providers client:load>
     <Index client:load />
   </Providers>
 </BaseLayout>
-

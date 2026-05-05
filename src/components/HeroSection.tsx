@@ -73,8 +73,9 @@ const HeroSection = () => {
             <div className="absolute -inset-8 rounded-2xl bg-primary/30 blur-3xl animate-pulse-glow" />
             
             {/* Video */}
-            <video 
+            <video
               src={demoVideo}
+              poster="/hero-screenshot.jpg"
               autoPlay
               loop
               muted

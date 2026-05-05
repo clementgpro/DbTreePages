@@ -197,23 +197,23 @@
     "questions": {
       "databases": {
         "question": "Which databases are supported?",
-        "answer": "Currently, DbTree supports PostgreSQL (version 9.6 and above). Support for other DBMS coming soon."
+        "answer": "DbTree currently supports PostgreSQL version 9.6 and above, including cloud-hosted PostgreSQL on Amazon RDS, Supabase, Neon, and Railway. The connection uses a standard PostgreSQL driver in read-only mode. Support for MySQL, MariaDB, SQLite, and Microsoft SQL Server is on the roadmap. All database credentials are stored locally on your machine and never transmitted to DbTree's servers."
       },
       "security": {
         "question": "Is my data safe?",
-        "answer": "Absolutely! DbTree works in read-only mode and stores no data. All connections are direct to your database."
+        "answer": "Yes. DbTree operates exclusively in read-only mode and never modifies, stores, or transmits your database data. All connections are made directly from your local machine to your database server — nothing passes through DbTree's infrastructure. Your database credentials are stored locally on your machine only. You can explore your data with complete confidence that nothing will be changed."
       },
       "platforms": {
         "question": "Can I use it on Mac or Linux?",
-        "answer": "The current version is optimized for Windows. Mac and Linux versions coming soon."
+        "answer": "The current version of DbTree is optimized for Windows 10 and Windows 11 (x64). The application is distributed as a portable zip — no installation required, just extract and run. Mac and Linux versions are actively in development and coming soon. Check back on the download page for release announcements."
       },
       "java": {
         "question": "Do I need to install Java?",
-        "answer": "No! The standalone version includes everything you need. Download and run, that's it."
+        "answer": "No. DbTree is a fully standalone application — the portable Windows zip includes the runtime and everything you need. Simply download the zip, extract it anywhere, and double-click the executable. No Java, no .NET framework, and no additional installations required. Minimum requirements: Windows 10 x64, 4 GB RAM, 100 MB disk space."
       },
       "trial": {
         "question": "Can I try it for free?",
-        "answer": "Yes! Download the free trial version, no credit card required."
+        "answer": "Yes. The Free plan is available at no cost with no credit card required. It includes all core features — tree visualization, foreign key navigation, record details, and lazy loading — with navigation limited to 2 hierarchical levels. Upgrade to Pro (€5/month) for unlimited hierarchical exploration, or choose the Lifetime license (€150 one-time) for permanent unlimited access."
       }
     }
   },

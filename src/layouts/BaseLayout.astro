@@ -6,13 +6,15 @@ export interface Props {
   description?: string;
   ogImage?: string;
   canonicalUrl?: string;
+  schema?: string;
 }
 
 const {
   title = 'DbTree — Explore your database as a tree',
   description = 'The first desktop SQL client designed to visualize your relational databases as an intuitive hierarchical tree. Forget mental JOINs, click and expand your relationships instantly.',
-  ogImage = '/og-image.png',
+  ogImage = '/hero-screenshot.jpg',
   canonicalUrl,
+  schema,
 } = Astro.props;
 
 const siteUrl = 'https://dbtree.app';
@@ -46,6 +48,45 @@ const canonical = canonicalUrl ?? siteUrl + Astro.url.pathname;
 
     <!-- Google Search Console verification -->
     <meta name="google-site-verification" content="oJCVvg2uJYqQBLw-XHYpJk6xVX-EQ2WmeShfzxU0698" />
+
+    <!-- Sitewide Schema: WebSite + Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://dbtree.app/#website",
+          "name": "DbTree",
+          "url": "https://dbtree.app",
+          "description": "The first desktop SQL client that visualizes relational databases as hierarchical trees.",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://dbtree.app/#organization",
+          "name": "DbTree",
+          "url": "https://dbtree.app",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://dbtree.app/app-icon.png",
+            "width": 512,
+            "height": 512
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "contact.dbtree@gmail.com",
+            "contactType": "customer support",
+            "availableLanguage": ["English"]
+          },
+          "sameAs": []
+        }
+      ]
+    }
+    </script>
+
+    <!-- Page-specific schema (injected by individual pages) -->
+    {schema && <script type="application/ld+json" set:html={schema} />}
 
     <!--
       CRITICAL CSS — inlined to avoid render-blocking.

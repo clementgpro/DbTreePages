@@ -1,0 +1,19 @@
+# DbTree - https://dbtree.app
+> DbTree is a Windows desktop SQL client that visualizes PostgreSQL relational databases as interactive hierarchical trees. Navigate foreign key relationships by clicking instead of writing JOIN queries.
+
+## Key pages
+- Homepage: https://dbtree.app/
+- Download: https://dbtree.app/download
+- Contact: https://dbtree.app/contact
+
+## Product
+- Name: DbTree
+- Version: 1.0.0 (released 2026-01-10)
+- Platform: Windows 10/11 x64
+- Database support: PostgreSQL 9.6+
+- Pricing: Free (€0), Pro (€5/month), Lifetime (€150)
+- License type: Proprietary
+- Download: https://github.com/clementgpro/DbTreePages/releases/download/1.0.0/DbTree.zip
+
+## Contact
+- Email: contact.dbtree@gmail.com

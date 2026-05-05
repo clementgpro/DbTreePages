@@ -2,14 +2,23 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Providers from '@/components/Providers';
 import Contact from '@/views/Contact';
+
+const breadcrumbSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dbtree.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://dbtree.app/contact" }
+  ]
+});
 ---
 
 <BaseLayout
   title="Contact — DbTree"
   description="Contact the DbTree team. We're happy to answer your questions."
+  schema={breadcrumbSchema}
 >
   <Providers client:load>
     <Contact client:load />
   </Providers>
 </BaseLayout>
-

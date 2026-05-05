@@ -46,9 +46,11 @@ const ComparisonSection = () => {
             </div>
 
             <div className="overflow-hidden rounded-xl border border-border/50">
-              <img 
-                src={avantSql} 
-                alt="Classic SQL client tabular view" 
+              <img
+                src={avantSql}
+                alt="Classic SQL client tabular view"
+                width="800"
+                height="500"
                 className="w-full"
               />
             </div>
@@ -76,9 +78,11 @@ const ComparisonSection = () => {
             </div>
 
             <div className="overflow-hidden rounded-xl border border-border/50">
-              <img 
-                src={apresDbtree} 
-                alt="DbTree tree view" 
+              <img
+                src={apresDbtree}
+                alt="DbTree tree view"
+                width="800"
+                height="500"
                 className="w-full"
               />
             </div>

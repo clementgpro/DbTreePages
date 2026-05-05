@@ -2,14 +2,23 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Providers from '@/components/Providers';
 import DownloadPage from '@/views/Download';
+
+const breadcrumbSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dbtree.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Download", "item": "https://dbtree.app/download" }
+  ]
+});
 ---
 
 <BaseLayout
-  title="Download DbTree — Windows SQL Tree Client"
-  description="Download DbTree for Windows. The desktop SQL client that visualizes your database as an intuitive hierarchical tree."
+  title="Download DbTree — Free PostgreSQL Database Tree Explorer for Windows"
+  description="Download DbTree for Windows. The desktop SQL client that visualizes your database as an intuitive hierarchical tree. Free plan available, no credit card required."
+  schema={breadcrumbSchema}
 >
   <Providers client:load>
     <DownloadPage client:load />
   </Providers>
 </BaseLayout>
-

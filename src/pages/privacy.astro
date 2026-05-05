@@ -2,14 +2,23 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Providers from '@/components/Providers';
 import Privacy from '@/views/Privacy';
+
+const breadcrumbSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dbtree.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://dbtree.app/privacy" }
+  ]
+});
 ---
 
 <BaseLayout
   title="Privacy Policy - DbTree"
   description="Read the Privacy Policy for DbTree. We respect your data and never collect personal information."
+  schema={breadcrumbSchema}
 >
   <Providers client:load>
     <Privacy client:load />
   </Providers>
 </BaseLayout>
-

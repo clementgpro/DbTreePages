@@ -2,14 +2,23 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Providers from '@/components/Providers';
 import LegalNotice from '@/views/LegalNotice';
+
+const breadcrumbSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dbtree.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Legal Notice", "item": "https://dbtree.app/legal-notice" }
+  ]
+});
 ---
 
 <BaseLayout
   title="Legal Notice - DbTree"
   description="Legal notice for DbTree - publisher information, hosting details and intellectual property."
+  schema={breadcrumbSchema}
 >
   <Providers client:load>
     <LegalNotice client:load />
   </Providers>
 </BaseLayout>
-
