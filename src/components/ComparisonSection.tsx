@@ -22,7 +22,7 @@ const ComparisonSection = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-24 bg-muted/30">
+    <section className="py-24 bg-muted/30">
       <div className="container mx-auto px-4">
         {/* Section header */}
         <div className="mx-auto mb-16 max-w-2xl text-center">

@@ -42,11 +42,7 @@ const HeroSection = () => {
                 <span className="ml-2">🚀</span>
               </a>
             </Button>
-            <Button variant="heroOutline" size="xl" asChild>
-              <a href="#features">
-                {t('hero.ctaSecondary')}
-              </a>
-            </Button>
+
           </div>
         </div>
 

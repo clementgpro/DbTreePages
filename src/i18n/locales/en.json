@@ -1,7 +1,5 @@
 {
   "nav": {
-    "features": "Features",
-    "howItWorks": "How it works",
     "pricing": "Pricing",
     "download": "Download"
   },
@@ -11,71 +9,10 @@
     "title2": "Explore it.",
     "description": "The first desktop SQL client designed to visualize your relational databases as an intuitive hierarchical tree. Forget mental JOINs, click and expand your relationships instantly.",
     "cta": "Download",
-    "ctaSecondary": "See features",
     "stats": {
       "faster": "Faster than SQL",
       "queries": "Queries to write",
       "relations": "Visible relations"
-    }
-  },
-  "features": {
-    "title": "A new way to ",
-    "titleHighlight": "explore your data",
-    "description": "No more complicated SQL queries! Instantly discover how your data is connected with a modern and powerful interface.",
-    "main": {
-      "navigation": {
-        "title": "Smart Navigation",
-        "description": "Explore your data by naturally following relationships between tables. Click to expand, navigate from one record to another while instantly visualizing parent-child links."
-      },
-      "visualization": {
-        "title": "Tree Visualization",
-        "description": "Transform your foreign keys into a clear visual structure. Understand at a glance how your tables are interconnected and discover hidden dependencies."
-      },
-      "loading": {
-        "title": "Smart Loading",
-        "description": "Thanks to lazy loading, explore millions of records without slowdown. Only the data you need is loaded at the right time."
-      },
-      "pagination": {
-        "title": "Smooth Pagination",
-        "description": "Easily browse large tables with intuitive pagination. Filter by specific ID or navigate page by page through your records."
-      }
-    },
-    "secondary": {
-      "details": {
-        "title": "One-Click Details",
-        "description": "Display all fields of a record in a dedicated panel."
-      },
-      "export": {
-        "title": "Easy Export",
-        "description": "Copy a value, field, or complete row instantly."
-      },
-      "readonly": {
-        "title": "Read Only",
-        "description": "Explore with confidence, DbTree never modifies your data."
-      },
-      "performance": {
-        "title": "Maximum Performance",
-        "description": "Optimized connection pool for smooth exploration."
-      }
-    }
-  },
-  "howItWorks": {
-    "title": "From connection to exploration in ",
-    "titleHighlight": "3 steps",
-    "description": "Start exploring your data in minutes.",
-    "steps": {
-      "connect": {
-        "title": "Connect your DB",
-        "description": "Enter your credentials. DbTree scans the schema in read-only mode."
-      },
-      "analyze": {
-        "title": "Relationship Analysis",
-        "description": "The engine detects constraints (FK) and builds the data graph."
-      },
-      "explore": {
-        "title": "Explore in Tree Mode",
-        "description": "Navigate your tables like in your file explorer."
-      }
     }
   },
   "comparison": {

@@ -15,16 +15,6 @@ const Navbar = () => {
           <span className="text-xl font-bold">DbTree</span>
         </a>
 
-        {/* Navigation links */}
-        <div className="hidden items-center gap-8 md:flex">
-          <a href="#how-it-works" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-            {t('nav.howItWorks')}
-          </a>
-          <a href="#features" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-            {t('nav.features')}
-          </a>
-        </div>
-
         {/* CTA */}
         <div className="flex items-center gap-3">
           <Button size="sm" asChild>
