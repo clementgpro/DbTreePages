@@ -26,6 +26,13 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Guides */}
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
+          <a href="/postgresql-foreign-key-explorer/" className="transition-colors hover:text-foreground">{t('footer.guides.postgres')}</a>
+          <a href="/dbeaver-alternative/" className="transition-colors hover:text-foreground">{t('footer.guides.dbeaver')}</a>
+          <a href="/supabase-database-explorer/" className="transition-colors hover:text-foreground">{t('footer.guides.supabase')}</a>
+        </div>
+
         {/* Copyright */}
         <div className="mt-8 text-center text-sm text-muted-foreground">
           {t('footer.copyright', { year: new Date().getFullYear() })}
