@@ -7,7 +7,7 @@
     "badge": "New: Explore your data differently",
     "title1": "Stop reading your data.",
     "title2": "Explore it.",
-    "description": "The first desktop SQL client designed to visualize your relational databases as an intuitive hierarchical tree. Forget mental JOINs, click and expand your relationships instantly.",
+    "description": "The first desktop client that shows your PostgreSQL database as an interactive tree. Follow foreign keys in both directions and expand related records instantly, without writing a single JOIN.",
     "cta": "Download",
     "stats": {
       "faster": "Faster than SQL",
@@ -155,7 +155,12 @@
     "refund": "Refund Policy",
     "legalNotice": "Legal Notice",
     "contact": "Contact",
-    "copyright": "© {{year}} DbTree. All rights reserved."
+    "copyright": "© {{year}} DbTree. All rights reserved.",
+    "guides": {
+      "postgres": "PostgreSQL foreign key explorer",
+      "dbeaver": "DbTree vs DBeaver",
+      "supabase": "Supabase database explorer"
+    }
   },
   "download": {
     "back": "Back to home",

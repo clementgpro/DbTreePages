@@ -5,6 +5,12 @@
 - Homepage: https://dbtree.app/
 - Download: https://dbtree.app/download
 - Contact: https://dbtree.app/contact
+- Pricing: https://dbtree.app/pricing
+
+## Guides
+- How to explore foreign key relationships in PostgreSQL: https://dbtree.app/postgresql-foreign-key-explorer/
+- DbTree vs DBeaver: https://dbtree.app/dbeaver-alternative/
+- Explore your Supabase database as a tree: https://dbtree.app/supabase-database-explorer/
 
 ## Product
 - Name: DbTree

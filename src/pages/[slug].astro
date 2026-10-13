@@ -1,0 +1,48 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Providers from '@/components/Providers';
+import GuidePage from '@/views/Guide';
+import { guides, type Guide } from '@/data/guides';
+
+export function getStaticPaths() {
+  return guides.map((guide) => ({ params: { slug: guide.slug }, props: { guide } }));
+}
+
+const { guide } = Astro.props as { guide: Guide };
+
+const schemas: object[] = [
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": guide.title,
+    "description": guide.metaDescription,
+    "datePublished": guide.datePublished,
+    "url": `https://dbtree.app/${guide.slug}/`,
+    "image": "https://dbtree.app/apres-dbtree.jpg",
+    "author": { "@id": "https://dbtree.app/#organization" },
+    "publisher": { "@id": "https://dbtree.app/#organization" },
+  },
+];
+if (guide.faq) {
+  schemas.push({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": guide.faq.map((f) => ({
+      "@type": "Question",
+      "name": f.question,
+      "acceptedAnswer": { "@type": "Answer", "text": f.answer },
+    })),
+  });
+}
+---
+
+<BaseLayout
+  title={guide.metaTitle}
+  description={guide.metaDescription}
+  ogImage="/apres-dbtree.jpg"
+  schema={JSON.stringify(schemas)}
+>
+  <Providers client:load>
+    <GuidePage client:load slug={guide.slug} />
+  </Providers>
+</BaseLayout>
