@@ -20,7 +20,7 @@ const PricingSection = () => {
         </div>
 
         {/* Pricing cards */}
-        <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-3">
+        <div className="mx-auto grid max-w-3xl gap-8 md:grid-cols-2">
           {/* Free plan */}
           <div className="rounded-2xl border border-border bg-card p-8">
             <div className="mb-6">
@@ -53,40 +53,12 @@ const PricingSection = () => {
             </Button>
           </div>
 
-          {/* Pro plan */}
+          {/* Lifetime plan */}
           <div className="relative rounded-2xl border border-primary/50 bg-card p-8 glow-effect">
             <div className="absolute -top-3 right-8 rounded-full bg-primary px-3 py-1 text-xs font-medium text-primary-foreground">
-              {t('pricing.pro.badge')}
-            </div>
-            
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold">{t('pricing.pro.name')}</h3>
-              <p className="mt-2 text-muted-foreground">
-                {t('pricing.pro.description')}
-              </p>
+              {t('pricing.lifetime.badge')}
             </div>
 
-            <div className="mb-6">
-              <span className="text-4xl font-bold">{t('pricing.pro.price')}</span>
-              <span className="text-muted-foreground">{t('pricing.pro.period')}</span>
-            </div>
-
-            <ul className="mb-8 space-y-4">
-              {(t('pricing.pro.features', { returnObjects: true }) as string[]).map((feature, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                  <span className={index === 3 ? "font-medium" : ""}>{feature}</span>
-                </li>
-              ))}
-            </ul>
-
-            <Button className="w-full" asChild>
-              <a href="/download">{t('pricing.pro.cta')}</a>
-            </Button>
-          </div>
-
-          {/* Lifetime plan */}
-          <div className="rounded-2xl border border-border bg-card p-8">
             <div className="mb-6">
               <h3 className="text-xl font-semibold">{t('pricing.lifetime.name')}</h3>
               <p className="mt-2 text-muted-foreground">
@@ -108,7 +80,7 @@ const PricingSection = () => {
               ))}
             </ul>
 
-            <Button variant="outline" className="w-full" asChild>
+            <Button className="w-full" asChild>
               <a href="/download">{t('pricing.lifetime.cta')}</a>
             </Button>
           </div>
