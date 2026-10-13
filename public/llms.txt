@@ -11,7 +11,7 @@
 - Version: 1.0.0 (released 2026-01-10)
 - Platform: Windows 10/11 x64
 - Database support: PostgreSQL 9.6+
-- Pricing: Free (€0), Pro (€5/month), Lifetime (€150)
+- Pricing: Free (€0), Lifetime (€29 one-time)
 - License type: Proprietary
 - Download: https://github.com/clementgpro/DbTreePages/releases/download/1.0.0/DbTree.zip
 

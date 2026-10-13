@@ -85,7 +85,7 @@
   },
   "pricing": {
     "title": "Simple and transparent pricing",
-    "description": "Start for free, upgrade to Pro when you're ready.",
+    "description": "Start for free, unlock everything with a one-time payment.",
     "free": {
       "name": "Free",
       "price": "€0",
@@ -99,25 +99,12 @@
       ],
       "cta": "Download"
     },
-    "pro": {
-      "name": "Pro",
-      "price": "€5",
-      "period": "/month",
-      "description": "Explore without limits",
-      "badge": "Popular",
-      "features": [
-        "Access to all features",
-        "Connect to your databases",
-        "Hierarchical relationship view",
-        "Unlimited hierarchical levels"
-      ],
-      "cta": "Try for free"
-    },
     "lifetime": {
       "name": "Lifetime",
-      "price": "€150",
+      "price": "€29",
       "period": " once",
       "description": "One payment, lifetime access",
+      "badge": "Best value",
       "features": [
         "Access to all features",
         "Connect to your databases",
@@ -150,7 +137,7 @@
       },
       "trial": {
         "question": "Can I try it for free?",
-        "answer": "Yes. The Free plan is available at no cost with no credit card required. It includes all core features — tree visualization, foreign key navigation, record details, and lazy loading — with navigation limited to 2 hierarchical levels. Upgrade to Pro (€5/month) for unlimited hierarchical exploration, or choose the Lifetime license (€150 one-time) for permanent unlimited access."
+        "answer": "Yes. The Free plan is available at no cost with no credit card required. It includes all core features — tree visualization, foreign key navigation, record details, and lazy loading — with navigation limited to 2 hierarchical levels. Get the Lifetime license (€29 one-time payment) for permanent, unlimited hierarchical exploration."
       }
     }
   },
@@ -188,7 +175,7 @@
       "useTitle": "Use of the Software",
       "useContent": "DbTree is a desktop application for visualizing relational databases. It is provided as-is for personal and professional use. You may not reverse engineer, decompile, or disassemble the software.",
       "licenseTitle": "License",
-      "licenseContent": "The Free plan grants a limited license to use DbTree with restricted features. The Pro and Lifetime plans grant a full license for unlimited use. Licenses are personal and non-transferable.",
+      "licenseContent": "The Free plan grants a limited license to use DbTree with restricted features. The Lifetime plan grants a full license for unlimited use. Licenses are personal and non-transferable.",
       "limitationTitle": "Limitation of Liability",
       "limitationContent": "DbTree operates in read-only mode and does not modify your databases. However, we are not responsible for any data loss, corruption, or damage that may occur from the use of the software.",
       "modificationTitle": "Modifications",
@@ -206,7 +193,7 @@
       "storageTitle": "Data Storage",
       "storageContent": "Database connection credentials are stored locally on your machine only. They are never transmitted to our servers.",
       "rightsTitle": "Your Rights",
-      "rightsContent": "You can delete all locally stored data at any time by uninstalling DbTree. If you have a Pro account, you can request deletion of your account data by contacting us.",
+      "rightsContent": "You can delete all locally stored data at any time by uninstalling DbTree. If you have purchased a license, you can request deletion of your account data by contacting us.",
       "contactTitle": "Contact",
       "contactContent": "For privacy-related inquiries, reach us at contact.dbtree@gmail.com."
     },
@@ -214,7 +201,7 @@
       "title": "Refund Policy",
       "intro": "We want you to be satisfied with your purchase. Here is our refund policy.",
       "eligibilityTitle": "Eligibility",
-      "eligibilityContent": "You may request a full refund within 14 days of your purchase if DbTree does not meet your expectations. This applies to both Pro monthly subscriptions and Lifetime licenses.",
+      "eligibilityContent": "You may request a full refund within 14 days of your purchase if DbTree does not meet your expectations. This applies to Lifetime licenses.",
       "processTitle": "Refund Process",
       "processContent": "To request a refund, send an email to contact.dbtree@gmail.com with your purchase details (order number, email used for purchase). Refunds are processed within 5-10 business days.",
       "exclusionsTitle": "Exclusions",
