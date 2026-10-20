@@ -14,7 +14,7 @@
 
 ## Product
 - Name: DbTree
-- Version: 1.0.0 (released 2026-01-10)
+- Version: 1.0.0 (released 2026-02-03)
 - Platform: Windows 10/11 x64
 - Database support: PostgreSQL 9.6+
 - Pricing: Free (€0), Lifetime (€29 one-time)
