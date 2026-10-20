@@ -13,7 +13,15 @@
       "faster": "Faster than SQL",
       "queries": "Queries to write",
       "relations": "Visible relations"
-    }
+    },
+    "reassurance": "Free · Read-only · Your data never leaves your machine · 14-day refund"
+  },
+  "maker": {
+    "title": "Who builds DbTree?",
+    "intro": "Hi, I'm Clément, an independent developer.",
+    "story": "I built DbTree because following a single record through a database meant writing JOIN after JOIN. Exploring relationships as a tree turned out to be much faster, so I made it a tool.",
+    "contact": "There is no company or marketing team behind it, just me. Questions, bugs, feature requests: I read and answer every email.",
+    "github": "GitHub"
   },
   "comparison": {
     "title": "The End of SELECT * FROM + JOIN Chaos",
@@ -170,7 +178,11 @@
     "versionCol": "Version",
     "downloadCol": "Download",
     "windows": "Windows x64 (Portable)",
-    "downloadButton": "Download"
+    "downloadButton": "Download",
+    "unsignedTitle": "Windows may show a warning, here is why",
+    "unsignedContent": "DbTree is not code-signed yet: certificates are expensive for an independent developer. When you first run it, Windows SmartScreen may show \"Windows protected your PC\". Click \"More info\", then \"Run anyway\". The zip is hosted on the project's official GitHub release.",
+    "feedbackTitle": "Tried DbTree? Tell me what you think",
+    "feedbackContent": "Whether you love it, hate it or it didn't work on your database, a two-line email helps me a lot:"
   },
   "legal": {
     "back": "Back to home",
