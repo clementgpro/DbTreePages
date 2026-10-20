@@ -42,8 +42,10 @@ const HeroSection = () => {
                 <span className="ml-2">🚀</span>
               </a>
             </Button>
-
           </div>
+          <p className="mt-4 text-sm text-muted-foreground animate-slide-up delay-300">
+            {t('hero.reassurance')}
+          </p>
         </div>
 
         {/* Stats */}

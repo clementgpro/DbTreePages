@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Download, Monitor } from "lucide-react";
+import { ArrowLeft, Download, Mail, Monitor, ShieldAlert } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -68,6 +68,33 @@ const DownloadPage = () => {
 
                 </tbody>
               </table>
+            </div>
+
+            {/* Unsigned app notice */}
+            <div className="mt-8 rounded-xl border border-border bg-card p-6">
+              <div className="flex items-start gap-3">
+                <ShieldAlert className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                <div>
+                  <h2 className="font-semibold mb-2">{t('download.unsignedTitle')}</h2>
+                  <p className="text-sm text-muted-foreground">{t('download.unsignedContent')}</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Feedback */}
+            <div className="mt-4 rounded-xl border border-border bg-card p-6">
+              <div className="flex items-start gap-3">
+                <Mail className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                <div>
+                  <h2 className="font-semibold mb-2">{t('download.feedbackTitle')}</h2>
+                  <p className="text-sm text-muted-foreground">
+                    {t('download.feedbackContent')}{" "}
+                    <a href="mailto:contact.dbtree@gmail.com?subject=DbTree%20feedback" className="text-primary hover:underline">
+                      contact.dbtree@gmail.com
+                    </a>
+                  </p>
+                </div>
+              </div>
             </div>
 
           </div>

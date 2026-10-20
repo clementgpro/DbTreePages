@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import ComparisonSection from "@/components/ComparisonSection";
 import CompetitorComparisonSection from "@/components/CompetitorComparisonSection";
 import FAQSection from "@/components/FAQSection";
+import MakerSection from "@/components/MakerSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
@@ -15,6 +16,7 @@ const Index = () => {
         <ComparisonSection />
         <CompetitorComparisonSection />
         <FAQSection />
+        <MakerSection />
         <CTASection />
       </main>
       <Footer />
